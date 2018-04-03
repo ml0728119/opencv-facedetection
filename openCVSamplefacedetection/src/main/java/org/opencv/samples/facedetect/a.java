@@ -22,7 +22,7 @@ public class a {
 	 * @param patamBitmap
 	 * @return
 	 */
-	public static boolean savaQualityBitmap(String strPath, Bitmap patamBitmap, int quality) {
+	public static boolean saveQualityBitmap(String strPath, Bitmap patamBitmap, int quality) {
 
 //		makeFileDirs(strPath);
 		File localFile = new File(strPath);

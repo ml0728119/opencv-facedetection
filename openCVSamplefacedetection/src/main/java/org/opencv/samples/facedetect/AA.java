@@ -49,7 +49,7 @@ public class AA extends JavaCameraView implements CameraBridgeViewBase.CvCameraV
 	private String[] mDetectorName;
 	private CascadeClassifier mFaceJavaDetector;
 	private CascadeClassifier mEyeJavaDetector;
-	private DetectionBasedTracker mFaceNativeDetector;
+
 	BaseLoaderCallback mLoaderCallback;
 
 
@@ -122,7 +122,7 @@ public class AA extends JavaCameraView implements CameraBridgeViewBase.CvCameraV
 		} else
 			Log.i(TAG, "Loaded cascade classifier from " + mCascadeFileAbsolutePath);
 
-		mFaceNativeDetector = new DetectionBasedTracker(mCascadeFileAbsolutePath, 0);
+
 	}
 
 	private void createEyeDetector() throws IOException {
@@ -207,7 +207,7 @@ public class AA extends JavaCameraView implements CameraBridgeViewBase.CvCameraV
 			if (Math.round(height * mRelativeFaceSize) > 0) {
 				mAbsoluteFaceSize = Math.round(height * mRelativeFaceSize);
 			}
-			mFaceNativeDetector.setMinFaceSize(100);
+
 		}
 
 		MatOfRect faces = new MatOfRect();
@@ -215,11 +215,6 @@ public class AA extends JavaCameraView implements CameraBridgeViewBase.CvCameraV
 			if (mFaceJavaDetector != null)
 				mFaceJavaDetector.detectMultiScale(mGray, faces, 1.1, 2, 0, // TODO: objdetect.CV_HAAR_SCALE_IMAGE
 						new Size(mAbsoluteFaceSize, mAbsoluteFaceSize), new Size());
-		} else if (mDetectorType == NATIVE_DETECTOR) {
-			if (mFaceNativeDetector != null)
-				mFaceNativeDetector.detect(mGray, faces);
-		} else {
-			Log.e(TAG, "Detection method is not selected!");
 		}
 
 		Rect[] facesArray = faces.toArray();
@@ -338,6 +333,6 @@ public class AA extends JavaCameraView implements CameraBridgeViewBase.CvCameraV
 
 		String filePath = getContext().getCacheDir() + "/" + System.currentTimeMillis() + ".jpg";
 		DebugLog.e("CameraBridge", "file  " + filePath);
-		a.savaQualityBitmap(filePath, mCacheBitmap, 100);
+		a.saveQualityBitmap(filePath, mCacheBitmap, 100);
 	}
 }

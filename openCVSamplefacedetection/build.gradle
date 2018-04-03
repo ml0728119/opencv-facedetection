@@ -35,6 +35,6 @@ android {
 }
 
 dependencies {
-    compile project(':openCVLibrary341')
+    implementation project(':openCVLibrary341')
 
 }
