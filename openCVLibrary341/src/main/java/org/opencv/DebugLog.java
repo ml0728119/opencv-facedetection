@@ -8,7 +8,7 @@ package org.opencv;
 import android.util.Log;
 
 public class DebugLog {
-	public static boolean debug = true;
+	public static boolean debug = false;
 	static String className;
 	static String methodName;
 	static int lineNumber;

@@ -1,4 +1,4 @@
-package org.opencv.samples.facedetect;
+package com.hxqc.facedetectorlibraray;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -31,10 +31,10 @@ import java.util.ArrayList;
 /**
  * Created 胡俊杰
  * 2018/4/2.
- * Todo:
+ * Todo:  人脸识别相机
  */
 
-public class AA extends JavaCameraView implements CameraBridgeViewBase.CvCameraViewListener2 {
+public class FaceDetectorCameraView extends JavaCameraView implements CameraBridgeViewBase.CvCameraViewListener2 {
 	private static final String TAG = "OCVSample::Activity";
 	private Mat mRgba;
 	private Mat mGray;
@@ -45,26 +45,24 @@ public class AA extends JavaCameraView implements CameraBridgeViewBase.CvCameraV
 	public static final int JAVA_DETECTOR = 0;
 	public static final int NATIVE_DETECTOR = 1;
 	private int mDetectorType = JAVA_DETECTOR;
-	private String[] mDetectorName;
+
 	private CascadeClassifier mFaceJavaDetector;
 	private CascadeClassifier mEyeJavaDetector;
 
 	BaseLoaderCallback mLoaderCallback;
 
 
-	public AA(Context context, int cameraId) {
+	public FaceDetectorCameraView(Context context, int cameraId) {
 		super(context, cameraId);
 	}
 
-	public AA(Context context, AttributeSet attrs) {
+	public FaceDetectorCameraView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		init();
+		setCvCameraViewListener(this);
 	}
 
 	public void init() {
-		mDetectorName = new String[2];
-		mDetectorName[JAVA_DETECTOR] = "Java";
-		mDetectorName[NATIVE_DETECTOR] = "Native (tracking)";
 		mLoaderCallback = new LoaderCallback(getContext());
 	}
 
@@ -140,7 +138,6 @@ public class AA extends JavaCameraView implements CameraBridgeViewBase.CvCameraV
 	private String saveCascadeFace(Context context, String cascadeName) throws IOException {
 
 		int resID = context.getResources().getIdentifier(cascadeName.replace(".xml", ""), "raw", context.getPackageName());
-
 //		R.raw.lbpcascade_frontalface
 		InputStream is = context.getResources().openRawResource(resID);
 		File cascadeDir = context.getDir("cascade", Context.MODE_PRIVATE);
@@ -320,7 +317,7 @@ public class AA extends JavaCameraView implements CameraBridgeViewBase.CvCameraV
 	}
 
 
-	private void toSaveMat(Mat mat) {
+	private void toSaveMat(Mat mat)  {
 
 		Mat dstMat = mat.clone();
 		if (mat.width() > mat.height()) {
@@ -332,6 +329,10 @@ public class AA extends JavaCameraView implements CameraBridgeViewBase.CvCameraV
 
 		String filePath = getContext().getCacheDir() + "/" + System.currentTimeMillis() + ".jpg";
 		DebugLog.e("CameraBridge", "file  " + filePath);
-		a.saveQualityBitmap(filePath, mCacheBitmap, 100);
+		try {
+			a.saveQualityBitmap(filePath, mCacheBitmap);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }

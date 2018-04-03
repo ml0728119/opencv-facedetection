@@ -26,15 +26,10 @@ android {
 
         }
     }
-//将jnia文件夹重命名jni
-//    externalNativeBuild {
-//        ndkBuild {
-//            path "./src/main/jni/Android.mk"
-//        }
-//    }
+
 }
 
 dependencies {
-    implementation project(':openCVLibrary341')
+    implementation project(':facedetectorlibraray')
 
 }

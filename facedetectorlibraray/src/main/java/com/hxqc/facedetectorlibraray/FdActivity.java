@@ -1,4 +1,4 @@
-package org.opencv.samples.facedetect;
+package com.hxqc.facedetectorlibraray;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
-
-import com.hxqc.facedetectorlibraray.FaceDetectorCameraView;
 
 import org.opencv.DebugLog;
 import org.opencv.android.CameraBridgeViewBase;
@@ -35,12 +33,12 @@ public class FdActivity extends Activity {
 		setContentView(R.layout.face_detect_surface_view);
 		DebugLog.e("JavaCameraView", "etDefaultDisplay().getRotatio()" + this.getWindowManager().getDefaultDisplay().getRotation());
 
-		mOpenCvCameraView = (FaceDetectorCameraView) findViewById(R.id.fd_activity_surface_view);
+		mOpenCvCameraView = findViewById(R.id.fd_activity_surface_view);
 		mOpenCvCameraView.setVisibility(CameraBridgeViewBase.VISIBLE);
 		mOpenCvCameraView.setCameraIndex(CameraBridgeViewBase.CAMERA_ID_FRONT);
 		mOpenCvCameraView.setMaxFrameSize(720, 720);
-
-
+		mOpenCvCameraView.setCvCameraViewListener(mOpenCvCameraView);
+		mOpenCvCameraView.enableFpsMeter();
 
 
 	}
