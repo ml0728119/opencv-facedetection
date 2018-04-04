@@ -12,8 +12,8 @@ import android.util.AttributeSet;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-import com.hxqc.facedetectorlibraray.BuildConfig;
-import com.hxqc.facedetectorlibraray.R;
+import com.hxqc.facedetect.BuildConfig;
+import com.hxqc.facedetect.R;
 
 import org.opencv.DebugLog;
 import org.opencv.core.Mat;

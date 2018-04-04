@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.hxqc.facedetectorlibraray">
+          package="com.hxqc.facedetect">
 
     <application
         android:allowBackup="true"

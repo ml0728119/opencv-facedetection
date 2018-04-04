@@ -9,7 +9,7 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.view.ViewGroup.LayoutParams;
 
-import com.hxqc.facedetectorlibraray.BuildConfig;
+import com.hxqc.facedetect.BuildConfig;
 
 import org.opencv.DebugLog;
 import org.opencv.core.CvType;

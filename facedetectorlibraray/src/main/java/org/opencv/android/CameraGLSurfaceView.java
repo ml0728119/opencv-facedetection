@@ -7,7 +7,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.SurfaceHolder;
 
-import com.hxqc.facedetectorlibraray.R;
+import com.hxqc.facedetect.R;
 
 
 public class CameraGLSurfaceView extends GLSurfaceView {

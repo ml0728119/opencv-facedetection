@@ -21,12 +21,12 @@ android {
 
         }
     }
-    //将jnia文件夹重命名jni
-//    externalNativeBuild {
-//        ndkBuild {
-//            path "./src/main/jni/Android.mk"
-//        }
-//    }
+//    将jnia文件夹重命名jni
+    externalNativeBuild {
+        ndkBuild {
+            path "./src/main/jni/Android.mk"
+        }
+    }
 }
 
 dependencies {
