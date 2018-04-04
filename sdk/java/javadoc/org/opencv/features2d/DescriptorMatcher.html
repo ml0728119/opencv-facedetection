@@ -90,10 +90,10 @@
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../org/opencv/core/Algorithm.html" title="class in org.opencv.core">org.opencv.core.Algorithm</a></li>
+<li><a href="../../../org/opencv/core/Algorithm.html" title="class in org.opencv.core">org.Algorithm</a></li>
 <li>
 <ul class="inheritance">
-<li>org.opencv.features2d.DescriptorMatcher</li>
+<li>org.DescriptorMatcher</li>
 </ul>
 </li>
 </ul>
@@ -209,13 +209,13 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#knnMatch(org.opencv.core.Mat,%20java.util.List,%20int)">knnMatch</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
+<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#knnMatch(org.Mat,%20java.util.List,%20int)">knnMatch</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
         java.util.List&lt;<a href="../../../org/opencv/core/MatOfDMatch.html" title="class in org.opencv.core">MatOfDMatch</a>&gt;&nbsp;matches,
         int&nbsp;k)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#knnMatch(org.opencv.core.Mat,%20java.util.List,%20int,%20java.util.List,%20boolean)">knnMatch</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
+<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#knnMatch(org.Mat,%20java.util.List,%20int,%20java.util.List,%20boolean)">knnMatch</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
         java.util.List&lt;<a href="../../../org/opencv/core/MatOfDMatch.html" title="class in org.opencv.core">MatOfDMatch</a>&gt;&nbsp;matches,
         int&nbsp;k,
         java.util.List&lt;<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&gt;&nbsp;masks,
@@ -223,14 +223,14 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#knnMatch(org.opencv.core.Mat,%20org.opencv.core.Mat,%20java.util.List,%20int)">knnMatch</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
+<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#knnMatch(org.Mat,%20org.Mat,%20java.util.List,%20int)">knnMatch</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
         <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;trainDescriptors,
         java.util.List&lt;<a href="../../../org/opencv/core/MatOfDMatch.html" title="class in org.opencv.core">MatOfDMatch</a>&gt;&nbsp;matches,
         int&nbsp;k)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#knnMatch(org.opencv.core.Mat,%20org.opencv.core.Mat,%20java.util.List,%20int,%20org.opencv.core.Mat,%20boolean)">knnMatch</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
+<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#knnMatch(org.Mat,%20org.Mat,%20java.util.List,%20int,%20org.Mat,%20boolean)">knnMatch</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
         <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;trainDescriptors,
         java.util.List&lt;<a href="../../../org/opencv/core/MatOfDMatch.html" title="class in org.opencv.core">MatOfDMatch</a>&gt;&nbsp;matches,
         int&nbsp;k,
@@ -239,37 +239,37 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#match(org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.MatOfDMatch)">match</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
+<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#match(org.Mat,%20org.Mat,%20org.MatOfDMatch)">match</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
      <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;trainDescriptors,
      <a href="../../../org/opencv/core/MatOfDMatch.html" title="class in org.opencv.core">MatOfDMatch</a>&nbsp;matches)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#match(org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.MatOfDMatch,%20org.opencv.core.Mat)">match</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
+<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#match(org.Mat,%20org.Mat,%20org.MatOfDMatch,%20org.Mat)">match</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
      <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;trainDescriptors,
      <a href="../../../org/opencv/core/MatOfDMatch.html" title="class in org.opencv.core">MatOfDMatch</a>&nbsp;matches,
      <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;mask)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#match(org.opencv.core.Mat,%20org.opencv.core.MatOfDMatch)">match</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
+<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#match(org.Mat,%20org.MatOfDMatch)">match</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
      <a href="../../../org/opencv/core/MatOfDMatch.html" title="class in org.opencv.core">MatOfDMatch</a>&nbsp;matches)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#match(org.opencv.core.Mat,%20org.opencv.core.MatOfDMatch,%20java.util.List)">match</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
+<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#match(org.Mat,%20org.MatOfDMatch,%20java.util.List)">match</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
      <a href="../../../org/opencv/core/MatOfDMatch.html" title="class in org.opencv.core">MatOfDMatch</a>&nbsp;matches,
      java.util.List&lt;<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&gt;&nbsp;masks)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#radiusMatch(org.opencv.core.Mat,%20java.util.List,%20float)">radiusMatch</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
+<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#radiusMatch(org.Mat,%20java.util.List,%20float)">radiusMatch</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
            java.util.List&lt;<a href="../../../org/opencv/core/MatOfDMatch.html" title="class in org.opencv.core">MatOfDMatch</a>&gt;&nbsp;matches,
            float&nbsp;maxDistance)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#radiusMatch(org.opencv.core.Mat,%20java.util.List,%20float,%20java.util.List,%20boolean)">radiusMatch</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
+<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#radiusMatch(org.Mat,%20java.util.List,%20float,%20java.util.List,%20boolean)">radiusMatch</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
            java.util.List&lt;<a href="../../../org/opencv/core/MatOfDMatch.html" title="class in org.opencv.core">MatOfDMatch</a>&gt;&nbsp;matches,
            float&nbsp;maxDistance,
            java.util.List&lt;<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&gt;&nbsp;masks,
@@ -277,14 +277,14 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#radiusMatch(org.opencv.core.Mat,%20org.opencv.core.Mat,%20java.util.List,%20float)">radiusMatch</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
+<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#radiusMatch(org.Mat,%20org.Mat,%20java.util.List,%20float)">radiusMatch</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
            <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;trainDescriptors,
            java.util.List&lt;<a href="../../../org/opencv/core/MatOfDMatch.html" title="class in org.opencv.core">MatOfDMatch</a>&gt;&nbsp;matches,
            float&nbsp;maxDistance)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#radiusMatch(org.opencv.core.Mat,%20org.opencv.core.Mat,%20java.util.List,%20float,%20org.opencv.core.Mat,%20boolean)">radiusMatch</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
+<td class="colLast"><code><strong><a href="../../../org/opencv/features2d/DescriptorMatcher.html#radiusMatch(org.Mat,%20org.Mat,%20java.util.List,%20float,%20org.Mat,%20boolean)">radiusMatch</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;queryDescriptors,
            <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;trainDescriptors,
            java.util.List&lt;<a href="../../../org/opencv/core/MatOfDMatch.html" title="class in org.opencv.core">MatOfDMatch</a>&gt;&nbsp;matches,
            float&nbsp;maxDistance,
@@ -305,7 +305,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_org.opencv.core.Algorithm">
+<li class="blockList"><a name="methods_inherited_from_class_org.Algorithm">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.opencv.core.<a href="../../../org/opencv/core/Algorithm.html" title="class in org.opencv.core">Algorithm</a></h3>
@@ -339,7 +339,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
 <li class="blockList">
 <h4>BRUTEFORCE</h4>
 <pre>public static final&nbsp;int BRUTEFORCE</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.features2d.DescriptorMatcher.BRUTEFORCE">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.DescriptorMatcher.BRUTEFORCE">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="BRUTEFORCE_HAMMING">
@@ -349,7 +349,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
 <li class="blockList">
 <h4>BRUTEFORCE_HAMMING</h4>
 <pre>public static final&nbsp;int BRUTEFORCE_HAMMING</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.features2d.DescriptorMatcher.BRUTEFORCE_HAMMING">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.DescriptorMatcher.BRUTEFORCE_HAMMING">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="BRUTEFORCE_HAMMINGLUT">
@@ -359,7 +359,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
 <li class="blockList">
 <h4>BRUTEFORCE_HAMMINGLUT</h4>
 <pre>public static final&nbsp;int BRUTEFORCE_HAMMINGLUT</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.features2d.DescriptorMatcher.BRUTEFORCE_HAMMINGLUT">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.DescriptorMatcher.BRUTEFORCE_HAMMINGLUT">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="BRUTEFORCE_L1">
@@ -369,7 +369,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
 <li class="blockList">
 <h4>BRUTEFORCE_L1</h4>
 <pre>public static final&nbsp;int BRUTEFORCE_L1</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.features2d.DescriptorMatcher.BRUTEFORCE_L1">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.DescriptorMatcher.BRUTEFORCE_L1">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="BRUTEFORCE_SL2">
@@ -379,7 +379,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
 <li class="blockList">
 <h4>BRUTEFORCE_SL2</h4>
 <pre>public static final&nbsp;int BRUTEFORCE_SL2</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.features2d.DescriptorMatcher.BRUTEFORCE_SL2">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.DescriptorMatcher.BRUTEFORCE_SL2">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="FLANNBASED">
@@ -389,7 +389,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
 <li class="blockList">
 <h4>FLANNBASED</h4>
 <pre>public static final&nbsp;int FLANNBASED</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.features2d.DescriptorMatcher.FLANNBASED">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.DescriptorMatcher.FLANNBASED">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 </li>
@@ -502,7 +502,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
 <pre>public&nbsp;boolean&nbsp;isMaskSupported()</pre>
 </li>
 </ul>
-<a name="knnMatch(org.opencv.core.Mat, java.util.List, int)">
+<a name="knnMatch(org.Mat, java.util.List, int)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -513,7 +513,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
             int&nbsp;k)</pre>
 </li>
 </ul>
-<a name="knnMatch(org.opencv.core.Mat, java.util.List, int, java.util.List, boolean)">
+<a name="knnMatch(org.Mat, java.util.List, int, java.util.List, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -526,7 +526,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
             boolean&nbsp;compactResult)</pre>
 </li>
 </ul>
-<a name="knnMatch(org.opencv.core.Mat, org.opencv.core.Mat, java.util.List, int)">
+<a name="knnMatch(org.Mat, org.Mat, java.util.List, int)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -538,7 +538,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
             int&nbsp;k)</pre>
 </li>
 </ul>
-<a name="knnMatch(org.opencv.core.Mat, org.opencv.core.Mat, java.util.List, int, org.opencv.core.Mat, boolean)">
+<a name="knnMatch(org.Mat, org.Mat, java.util.List, int, org.Mat, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -552,7 +552,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
             boolean&nbsp;compactResult)</pre>
 </li>
 </ul>
-<a name="match(org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.MatOfDMatch)">
+<a name="match(org.Mat, org.Mat, org.MatOfDMatch)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -563,7 +563,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
          <a href="../../../org/opencv/core/MatOfDMatch.html" title="class in org.opencv.core">MatOfDMatch</a>&nbsp;matches)</pre>
 </li>
 </ul>
-<a name="match(org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.MatOfDMatch, org.opencv.core.Mat)">
+<a name="match(org.Mat, org.Mat, org.MatOfDMatch, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -575,7 +575,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
          <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;mask)</pre>
 </li>
 </ul>
-<a name="match(org.opencv.core.Mat, org.opencv.core.MatOfDMatch)">
+<a name="match(org.Mat, org.MatOfDMatch)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -585,7 +585,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
          <a href="../../../org/opencv/core/MatOfDMatch.html" title="class in org.opencv.core">MatOfDMatch</a>&nbsp;matches)</pre>
 </li>
 </ul>
-<a name="match(org.opencv.core.Mat, org.opencv.core.MatOfDMatch, java.util.List)">
+<a name="match(org.Mat, org.MatOfDMatch, java.util.List)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -596,7 +596,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
          java.util.List&lt;<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&gt;&nbsp;masks)</pre>
 </li>
 </ul>
-<a name="radiusMatch(org.opencv.core.Mat, java.util.List, float)">
+<a name="radiusMatch(org.Mat, java.util.List, float)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -607,7 +607,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
                float&nbsp;maxDistance)</pre>
 </li>
 </ul>
-<a name="radiusMatch(org.opencv.core.Mat, java.util.List, float, java.util.List, boolean)">
+<a name="radiusMatch(org.Mat, java.util.List, float, java.util.List, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -620,7 +620,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
                boolean&nbsp;compactResult)</pre>
 </li>
 </ul>
-<a name="radiusMatch(org.opencv.core.Mat, org.opencv.core.Mat, java.util.List, float)">
+<a name="radiusMatch(org.Mat, org.Mat, java.util.List, float)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -632,7 +632,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
                float&nbsp;maxDistance)</pre>
 </li>
 </ul>
-<a name="radiusMatch(org.opencv.core.Mat, org.opencv.core.Mat, java.util.List, float, org.opencv.core.Mat, boolean)">
+<a name="radiusMatch(org.Mat, org.Mat, java.util.List, float, org.Mat, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">

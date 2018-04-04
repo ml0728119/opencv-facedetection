@@ -90,13 +90,13 @@
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../org/opencv/core/Algorithm.html" title="class in org.opencv.core">org.opencv.core.Algorithm</a></li>
+<li><a href="../../../org/opencv/core/Algorithm.html" title="class in org.opencv.core">org.Algorithm</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../org/opencv/video/BackgroundSubtractor.html" title="class in org.opencv.video">org.opencv.video.BackgroundSubtractor</a></li>
+<li><a href="../../../org/opencv/video/BackgroundSubtractor.html" title="class in org.opencv.video">org.BackgroundSubtractor</a></li>
 <li>
 <ul class="inheritance">
-<li>org.opencv.video.BackgroundSubtractorMOG2</li>
+<li>org.BackgroundSubtractorMOG2</li>
 </ul>
 </li>
 </ul>
@@ -135,12 +135,12 @@ extends <a href="../../../org/opencv/video/BackgroundSubtractor.html" title="cla
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/video/BackgroundSubtractorMOG2.html#apply(org.opencv.core.Mat,%20org.opencv.core.Mat)">apply</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;image,
+<td class="colLast"><code><strong><a href="../../../org/opencv/video/BackgroundSubtractorMOG2.html#apply(org.Mat,%20org.Mat)">apply</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;image,
      <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;fgmask)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/video/BackgroundSubtractorMOG2.html#apply(org.opencv.core.Mat,%20org.opencv.core.Mat,%20double)">apply</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;image,
+<td class="colLast"><code><strong><a href="../../../org/opencv/video/BackgroundSubtractorMOG2.html#apply(org.Mat,%20org.Mat,%20double)">apply</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;image,
      <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;fgmask,
      double&nbsp;learningRate)</code>&nbsp;</td>
 </tr>
@@ -242,14 +242,14 @@ extends <a href="../../../org/opencv/video/BackgroundSubtractor.html" title="cla
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_org.opencv.video.BackgroundSubtractor">
+<li class="blockList"><a name="methods_inherited_from_class_org.BackgroundSubtractor">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.opencv.video.<a href="../../../org/opencv/video/BackgroundSubtractor.html" title="class in org.opencv.video">BackgroundSubtractor</a></h3>
-<code><a href="../../../org/opencv/video/BackgroundSubtractor.html#getBackgroundImage(org.opencv.core.Mat)">getBackgroundImage</a></code></li>
+<code><a href="../../../org/opencv/video/BackgroundSubtractor.html#getBackgroundImage(org.Mat)">getBackgroundImage</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_org.opencv.core.Algorithm">
+<li class="blockList"><a name="methods_inherited_from_class_org.Algorithm">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.opencv.core.<a href="../../../org/opencv/core/Algorithm.html" title="class in org.opencv.core">Algorithm</a></h3>
@@ -285,7 +285,7 @@ extends <a href="../../../org/opencv/video/BackgroundSubtractor.html" title="cla
 <pre>public static&nbsp;<a href="../../../org/opencv/video/BackgroundSubtractorMOG2.html" title="class in org.opencv.video">BackgroundSubtractorMOG2</a>&nbsp;__fromPtr__(long&nbsp;addr)</pre>
 </li>
 </ul>
-<a name="apply(org.opencv.core.Mat, org.opencv.core.Mat)">
+<a name="apply(org.Mat, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -295,11 +295,11 @@ extends <a href="../../../org/opencv/video/BackgroundSubtractor.html" title="cla
          <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;fgmask)</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../../org/opencv/video/BackgroundSubtractor.html#apply(org.opencv.core.Mat,%20org.opencv.core.Mat)">apply</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/opencv/video/BackgroundSubtractor.html" title="class in org.opencv.video">BackgroundSubtractor</a></code></dd>
+<dd><code><a href="../../../org/opencv/video/BackgroundSubtractor.html#apply(org.Mat,%20org.Mat)">apply</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/opencv/video/BackgroundSubtractor.html" title="class in org.opencv.video">BackgroundSubtractor</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="apply(org.opencv.core.Mat, org.opencv.core.Mat, double)">
+<a name="apply(org.Mat, org.Mat, double)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -310,7 +310,7 @@ extends <a href="../../../org/opencv/video/BackgroundSubtractor.html" title="cla
          double&nbsp;learningRate)</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../../org/opencv/video/BackgroundSubtractor.html#apply(org.opencv.core.Mat,%20org.opencv.core.Mat,%20double)">apply</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/opencv/video/BackgroundSubtractor.html" title="class in org.opencv.video">BackgroundSubtractor</a></code></dd>
+<dd><code><a href="../../../org/opencv/video/BackgroundSubtractor.html#apply(org.Mat,%20org.Mat,%20double)">apply</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/opencv/video/BackgroundSubtractor.html" title="class in org.opencv.video">BackgroundSubtractor</a></code></dd>
 </dl>
 </li>
 </ul>

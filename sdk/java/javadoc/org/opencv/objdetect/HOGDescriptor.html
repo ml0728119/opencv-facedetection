@@ -90,7 +90,7 @@
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>org.opencv.objdetect.HOGDescriptor</li>
+<li>org.HOGDescriptor</li>
 </ul>
 </li>
 </ul>
@@ -145,14 +145,14 @@ extends java.lang.Object</pre>
 <td class="colOne"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#HOGDescriptor()">HOGDescriptor</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#HOGDescriptor(org.opencv.core.Size,%20org.opencv.core.Size,%20org.opencv.core.Size,%20org.opencv.core.Size,%20int)">HOGDescriptor</a></strong>(<a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;_winSize,
+<td class="colOne"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#HOGDescriptor(org.Size,%20org.Size,%20org.Size,%20org.Size,%20int)">HOGDescriptor</a></strong>(<a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;_winSize,
              <a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;_blockSize,
              <a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;_blockStride,
              <a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;_cellSize,
              int&nbsp;_nbins)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#HOGDescriptor(org.opencv.core.Size,%20org.opencv.core.Size,%20org.opencv.core.Size,%20org.opencv.core.Size,%20int,%20int,%20double,%20int,%20double,%20boolean,%20int,%20boolean)">HOGDescriptor</a></strong>(<a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;_winSize,
+<td class="colOne"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#HOGDescriptor(org.Size,%20org.Size,%20org.Size,%20org.Size,%20int,%20int,%20double,%20int,%20double,%20boolean,%20int,%20boolean)">HOGDescriptor</a></strong>(<a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;_winSize,
              <a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;_blockSize,
              <a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;_blockStride,
              <a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;_cellSize,
@@ -193,12 +193,12 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#compute(org.opencv.core.Mat,%20org.opencv.core.MatOfFloat)">compute</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;img,
+<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#compute(org.Mat,%20org.MatOfFloat)">compute</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;img,
        <a href="../../../org/opencv/core/MatOfFloat.html" title="class in org.opencv.core">MatOfFloat</a>&nbsp;descriptors)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#compute(org.opencv.core.Mat,%20org.opencv.core.MatOfFloat,%20org.opencv.core.Size,%20org.opencv.core.Size,%20org.opencv.core.MatOfPoint)">compute</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;img,
+<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#compute(org.Mat,%20org.MatOfFloat,%20org.Size,%20org.Size,%20org.MatOfPoint)">compute</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;img,
        <a href="../../../org/opencv/core/MatOfFloat.html" title="class in org.opencv.core">MatOfFloat</a>&nbsp;descriptors,
        <a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;winStride,
        <a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;padding,
@@ -206,13 +206,13 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#computeGradient(org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat)">computeGradient</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;img,
+<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#computeGradient(org.Mat,%20org.Mat,%20org.Mat)">computeGradient</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;img,
                <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;grad,
                <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;angleOfs)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#computeGradient(org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Size,%20org.opencv.core.Size)">computeGradient</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;img,
+<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#computeGradient(org.Mat,%20org.Mat,%20org.Mat,%20org.Size,%20org.Size)">computeGradient</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;img,
                <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;grad,
                <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;angleOfs,
                <a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;paddingTL,
@@ -220,13 +220,13 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#detect(org.opencv.core.Mat,%20org.opencv.core.MatOfPoint,%20org.opencv.core.MatOfDouble)">detect</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;img,
+<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#detect(org.Mat,%20org.MatOfPoint,%20org.MatOfDouble)">detect</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;img,
       <a href="../../../org/opencv/core/MatOfPoint.html" title="class in org.opencv.core">MatOfPoint</a>&nbsp;foundLocations,
       <a href="../../../org/opencv/core/MatOfDouble.html" title="class in org.opencv.core">MatOfDouble</a>&nbsp;weights)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#detect(org.opencv.core.Mat,%20org.opencv.core.MatOfPoint,%20org.opencv.core.MatOfDouble,%20double,%20org.opencv.core.Size,%20org.opencv.core.Size,%20org.opencv.core.MatOfPoint)">detect</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;img,
+<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#detect(org.Mat,%20org.MatOfPoint,%20org.MatOfDouble,%20double,%20org.Size,%20org.Size,%20org.MatOfPoint)">detect</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;img,
       <a href="../../../org/opencv/core/MatOfPoint.html" title="class in org.opencv.core">MatOfPoint</a>&nbsp;foundLocations,
       <a href="../../../org/opencv/core/MatOfDouble.html" title="class in org.opencv.core">MatOfDouble</a>&nbsp;weights,
       double&nbsp;hitThreshold,
@@ -236,13 +236,13 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#detectMultiScale(org.opencv.core.Mat,%20org.opencv.core.MatOfRect,%20org.opencv.core.MatOfDouble)">detectMultiScale</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;img,
+<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#detectMultiScale(org.Mat,%20org.MatOfRect,%20org.MatOfDouble)">detectMultiScale</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;img,
                 <a href="../../../org/opencv/core/MatOfRect.html" title="class in org.opencv.core">MatOfRect</a>&nbsp;foundLocations,
                 <a href="../../../org/opencv/core/MatOfDouble.html" title="class in org.opencv.core">MatOfDouble</a>&nbsp;foundWeights)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#detectMultiScale(org.opencv.core.Mat,%20org.opencv.core.MatOfRect,%20org.opencv.core.MatOfDouble,%20double,%20org.opencv.core.Size,%20org.opencv.core.Size,%20double,%20double,%20boolean)">detectMultiScale</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;img,
+<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#detectMultiScale(org.Mat,%20org.MatOfRect,%20org.MatOfDouble,%20double,%20org.Size,%20org.Size,%20double,%20double,%20boolean)">detectMultiScale</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;img,
                 <a href="../../../org/opencv/core/MatOfRect.html" title="class in org.opencv.core">MatOfRect</a>&nbsp;foundLocations,
                 <a href="../../../org/opencv/core/MatOfDouble.html" title="class in org.opencv.core">MatOfDouble</a>&nbsp;foundWeights,
                 double&nbsp;hitThreshold,
@@ -344,7 +344,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#setSVMDetector(org.opencv.core.Mat)">setSVMDetector</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;_svmdetector)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/opencv/objdetect/HOGDescriptor.html#setSVMDetector(org.Mat)">setSVMDetector</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;_svmdetector)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -375,7 +375,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>DEFAULT_NLEVELS</h4>
 <pre>public static final&nbsp;int DEFAULT_NLEVELS</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.objdetect.HOGDescriptor.DEFAULT_NLEVELS">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.HOGDescriptor.DEFAULT_NLEVELS">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="L2Hys">
@@ -385,7 +385,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>L2Hys</h4>
 <pre>public static final&nbsp;int L2Hys</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.objdetect.HOGDescriptor.L2Hys">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.HOGDescriptor.L2Hys">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 </li>
@@ -405,7 +405,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;HOGDescriptor()</pre>
 </li>
 </ul>
-<a name="HOGDescriptor(org.opencv.core.Size, org.opencv.core.Size, org.opencv.core.Size, org.opencv.core.Size, int)">
+<a name="HOGDescriptor(org.Size, org.Size, org.Size, org.Size, int)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -418,7 +418,7 @@ extends java.lang.Object</pre>
              int&nbsp;_nbins)</pre>
 </li>
 </ul>
-<a name="HOGDescriptor(org.opencv.core.Size, org.opencv.core.Size, org.opencv.core.Size, org.opencv.core.Size, int, int, double, int, double, boolean, int, boolean)">
+<a name="HOGDescriptor(org.Size, org.Size, org.Size, org.Size, int, int, double, int, double, boolean, int, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -473,7 +473,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;boolean&nbsp;checkDetectorSize()</pre>
 </li>
 </ul>
-<a name="compute(org.opencv.core.Mat, org.opencv.core.MatOfFloat)">
+<a name="compute(org.Mat, org.MatOfFloat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -483,7 +483,7 @@ extends java.lang.Object</pre>
            <a href="../../../org/opencv/core/MatOfFloat.html" title="class in org.opencv.core">MatOfFloat</a>&nbsp;descriptors)</pre>
 </li>
 </ul>
-<a name="compute(org.opencv.core.Mat, org.opencv.core.MatOfFloat, org.opencv.core.Size, org.opencv.core.Size, org.opencv.core.MatOfPoint)">
+<a name="compute(org.Mat, org.MatOfFloat, org.Size, org.Size, org.MatOfPoint)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -496,7 +496,7 @@ extends java.lang.Object</pre>
            <a href="../../../org/opencv/core/MatOfPoint.html" title="class in org.opencv.core">MatOfPoint</a>&nbsp;locations)</pre>
 </li>
 </ul>
-<a name="computeGradient(org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat)">
+<a name="computeGradient(org.Mat, org.Mat, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -507,7 +507,7 @@ extends java.lang.Object</pre>
                    <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;angleOfs)</pre>
 </li>
 </ul>
-<a name="computeGradient(org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Size, org.opencv.core.Size)">
+<a name="computeGradient(org.Mat, org.Mat, org.Mat, org.Size, org.Size)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -520,7 +520,7 @@ extends java.lang.Object</pre>
                    <a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;paddingBR)</pre>
 </li>
 </ul>
-<a name="detect(org.opencv.core.Mat, org.opencv.core.MatOfPoint, org.opencv.core.MatOfDouble)">
+<a name="detect(org.Mat, org.MatOfPoint, org.MatOfDouble)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -531,7 +531,7 @@ extends java.lang.Object</pre>
           <a href="../../../org/opencv/core/MatOfDouble.html" title="class in org.opencv.core">MatOfDouble</a>&nbsp;weights)</pre>
 </li>
 </ul>
-<a name="detect(org.opencv.core.Mat, org.opencv.core.MatOfPoint, org.opencv.core.MatOfDouble, double, org.opencv.core.Size, org.opencv.core.Size, org.opencv.core.MatOfPoint)">
+<a name="detect(org.Mat, org.MatOfPoint, org.MatOfDouble, double, org.Size, org.Size, org.MatOfPoint)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -546,7 +546,7 @@ extends java.lang.Object</pre>
           <a href="../../../org/opencv/core/MatOfPoint.html" title="class in org.opencv.core">MatOfPoint</a>&nbsp;searchLocations)</pre>
 </li>
 </ul>
-<a name="detectMultiScale(org.opencv.core.Mat, org.opencv.core.MatOfRect, org.opencv.core.MatOfDouble)">
+<a name="detectMultiScale(org.Mat, org.MatOfRect, org.MatOfDouble)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -557,7 +557,7 @@ extends java.lang.Object</pre>
                     <a href="../../../org/opencv/core/MatOfDouble.html" title="class in org.opencv.core">MatOfDouble</a>&nbsp;foundWeights)</pre>
 </li>
 </ul>
-<a name="detectMultiScale(org.opencv.core.Mat, org.opencv.core.MatOfRect, org.opencv.core.MatOfDouble, double, org.opencv.core.Size, org.opencv.core.Size, double, double, boolean)">
+<a name="detectMultiScale(org.Mat, org.MatOfRect, org.MatOfDouble, double, org.Size, org.Size, double, double, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -774,7 +774,7 @@ extends java.lang.Object</pre>
         java.lang.String&nbsp;objname)</pre>
 </li>
 </ul>
-<a name="setSVMDetector(org.opencv.core.Mat)">
+<a name="setSVMDetector(org.Mat)">
 <!--   -->
 </a>
 <ul class="blockListLast">

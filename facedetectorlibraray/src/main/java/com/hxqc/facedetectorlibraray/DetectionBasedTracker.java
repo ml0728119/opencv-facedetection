@@ -1,7 +1,7 @@
 package com.hxqc.facedetectorlibraray;//package org.opencv.samples.facedetect;
 //
-//import org.opencv.core.Mat;
-//import org.opencv.core.MatOfRect;
+//import org.Mat;
+//import org.MatOfRect;
 //
 //public class DetectionBasedTracker
 //{

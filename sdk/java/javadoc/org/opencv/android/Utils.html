@@ -90,7 +90,7 @@
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>org.opencv.android.Utils</li>
+<li>org.Utils</li>
 </ul>
 </li>
 </ul>
@@ -138,14 +138,14 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/android/Utils.html#bitmapToMat(android.graphics.Bitmap,%20org.opencv.core.Mat)">bitmapToMat</a></strong>(android.graphics.Bitmap&nbsp;bmp,
+<td class="colLast"><code><strong><a href="../../../org/opencv/android/Utils.html#bitmapToMat(android.graphics.Bitmap,%20org.Mat)">bitmapToMat</a></strong>(android.graphics.Bitmap&nbsp;bmp,
            <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;mat)</code>
 <div class="block">Short form of the bitmapToMat(bmp, mat, unPremultiplyAlpha=false).</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/android/Utils.html#bitmapToMat(android.graphics.Bitmap,%20org.opencv.core.Mat,%20boolean)">bitmapToMat</a></strong>(android.graphics.Bitmap&nbsp;bmp,
+<td class="colLast"><code><strong><a href="../../../org/opencv/android/Utils.html#bitmapToMat(android.graphics.Bitmap,%20org.Mat,%20boolean)">bitmapToMat</a></strong>(android.graphics.Bitmap&nbsp;bmp,
            <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;mat,
            boolean&nbsp;unPremultiplyAlpha)</code>
 <div class="block">Converts Android Bitmap to OpenCV Mat.</div>
@@ -175,14 +175,14 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/android/Utils.html#matToBitmap(org.opencv.core.Mat,%20android.graphics.Bitmap)">matToBitmap</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;mat,
+<td class="colLast"><code><strong><a href="../../../org/opencv/android/Utils.html#matToBitmap(org.Mat,%20android.graphics.Bitmap)">matToBitmap</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;mat,
            android.graphics.Bitmap&nbsp;bmp)</code>
 <div class="block">Short form of the <b>matToBitmap(mat, bmp, premultiplyAlpha=false)</b></div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/android/Utils.html#matToBitmap(org.opencv.core.Mat,%20android.graphics.Bitmap,%20boolean)">matToBitmap</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;mat,
+<td class="colLast"><code><strong><a href="../../../org/opencv/android/Utils.html#matToBitmap(org.Mat,%20android.graphics.Bitmap,%20boolean)">matToBitmap</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;mat,
            android.graphics.Bitmap&nbsp;bmp,
            boolean&nbsp;premultiplyAlpha)</code>
 <div class="block">Converts OpenCV Mat to Android Bitmap.</div>
@@ -227,7 +227,7 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="bitmapToMat(android.graphics.Bitmap, org.opencv.core.Mat)">
+<a name="bitmapToMat(android.graphics.Bitmap, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -239,7 +239,7 @@ extends java.lang.Object</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>bmp</code> - is a valid input Bitmap object of the type 'ARGB_8888' or 'RGB_565'.</dd><dd><code>mat</code> - is a valid output Mat object, it will be reallocated if needed, so Mat may be empty.</dd></dl>
 </li>
 </ul>
-<a name="bitmapToMat(android.graphics.Bitmap, org.opencv.core.Mat, boolean)">
+<a name="bitmapToMat(android.graphics.Bitmap, org.Mat, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -306,7 +306,7 @@ extends java.lang.Object</pre>
 <dd><code>java.io.IOException</code></dd></dl>
 </li>
 </ul>
-<a name="matToBitmap(org.opencv.core.Mat, android.graphics.Bitmap)">
+<a name="matToBitmap(org.Mat, android.graphics.Bitmap)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -318,7 +318,7 @@ extends java.lang.Object</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>mat</code> - is a valid input Mat object of the types 'CV_8UC1', 'CV_8UC3' or 'CV_8UC4'.</dd><dd><code>bmp</code> - is a valid Bitmap object of the same size as the Mat and of type 'ARGB_8888' or 'RGB_565'.</dd></dl>
 </li>
 </ul>
-<a name="matToBitmap(org.opencv.core.Mat, android.graphics.Bitmap, boolean)">
+<a name="matToBitmap(org.Mat, android.graphics.Bitmap, boolean)">
 <!--   -->
 </a>
 <ul class="blockListLast">

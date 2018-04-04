@@ -30,6 +30,6 @@ android {
 }
 
 dependencies {
-    implementation project(':facedetectorlibraray')
-
+//        implementation project(':facedetectorlibraray')
+    api 'com.hxqc:FaceDetector:0.0.2'
 }

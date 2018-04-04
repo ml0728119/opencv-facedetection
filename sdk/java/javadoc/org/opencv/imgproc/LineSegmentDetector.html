@@ -90,10 +90,10 @@
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../org/opencv/core/Algorithm.html" title="class in org.opencv.core">org.opencv.core.Algorithm</a></li>
+<li><a href="../../../org/opencv/core/Algorithm.html" title="class in org.opencv.core">org.Algorithm</a></li>
 <li>
 <ul class="inheritance">
-<li>org.opencv.imgproc.LineSegmentDetector</li>
+<li>org.LineSegmentDetector</li>
 </ul>
 </li>
 </ul>
@@ -130,25 +130,25 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/imgproc/LineSegmentDetector.html#compareSegments(org.opencv.core.Size,%20org.opencv.core.Mat,%20org.opencv.core.Mat)">compareSegments</a></strong>(<a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;size,
+<td class="colLast"><code><strong><a href="../../../org/opencv/imgproc/LineSegmentDetector.html#compareSegments(org.Size,%20org.Mat,%20org.Mat)">compareSegments</a></strong>(<a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;size,
                <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;lines1,
                <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;lines2)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/imgproc/LineSegmentDetector.html#compareSegments(org.opencv.core.Size,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat)">compareSegments</a></strong>(<a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;size,
+<td class="colLast"><code><strong><a href="../../../org/opencv/imgproc/LineSegmentDetector.html#compareSegments(org.Size,%20org.Mat,%20org.Mat,%20org.Mat)">compareSegments</a></strong>(<a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;size,
                <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;lines1,
                <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;lines2,
                <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;_image)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/imgproc/LineSegmentDetector.html#detect(org.opencv.core.Mat,%20org.opencv.core.Mat)">detect</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;_image,
+<td class="colLast"><code><strong><a href="../../../org/opencv/imgproc/LineSegmentDetector.html#detect(org.Mat,%20org.Mat)">detect</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;_image,
       <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;_lines)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/imgproc/LineSegmentDetector.html#detect(org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat)">detect</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;_image,
+<td class="colLast"><code><strong><a href="../../../org/opencv/imgproc/LineSegmentDetector.html#detect(org.Mat,%20org.Mat,%20org.Mat,%20org.Mat,%20org.Mat)">detect</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;_image,
       <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;_lines,
       <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;width,
       <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;prec,
@@ -156,12 +156,12 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/imgproc/LineSegmentDetector.html#drawSegments(org.opencv.core.Mat,%20org.opencv.core.Mat)">drawSegments</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;_image,
+<td class="colLast"><code><strong><a href="../../../org/opencv/imgproc/LineSegmentDetector.html#drawSegments(org.Mat,%20org.Mat)">drawSegments</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;_image,
             <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;lines)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_org.opencv.core.Algorithm">
+<li class="blockList"><a name="methods_inherited_from_class_org.Algorithm">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.opencv.core.<a href="../../../org/opencv/core/Algorithm.html" title="class in org.opencv.core">Algorithm</a></h3>
@@ -197,7 +197,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
 <pre>public static&nbsp;<a href="../../../org/opencv/imgproc/LineSegmentDetector.html" title="class in org.opencv.imgproc">LineSegmentDetector</a>&nbsp;__fromPtr__(long&nbsp;addr)</pre>
 </li>
 </ul>
-<a name="compareSegments(org.opencv.core.Size, org.opencv.core.Mat, org.opencv.core.Mat)">
+<a name="compareSegments(org.Size, org.Mat, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -208,7 +208,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
                   <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;lines2)</pre>
 </li>
 </ul>
-<a name="compareSegments(org.opencv.core.Size, org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat)">
+<a name="compareSegments(org.Size, org.Mat, org.Mat, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -220,7 +220,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
                   <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;_image)</pre>
 </li>
 </ul>
-<a name="detect(org.opencv.core.Mat, org.opencv.core.Mat)">
+<a name="detect(org.Mat, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -230,7 +230,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
           <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;_lines)</pre>
 </li>
 </ul>
-<a name="detect(org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat)">
+<a name="detect(org.Mat, org.Mat, org.Mat, org.Mat, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -243,7 +243,7 @@ extends <a href="../../../org/opencv/core/Algorithm.html" title="class in org.op
           <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;nfa)</pre>
 </li>
 </ul>
-<a name="drawSegments(org.opencv.core.Mat, org.opencv.core.Mat)">
+<a name="drawSegments(org.Mat, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockListLast">

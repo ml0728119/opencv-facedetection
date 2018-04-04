@@ -90,7 +90,7 @@
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>org.opencv.dnn.Net</li>
+<li>org.Net</li>
 </ul>
 </li>
 </ul>
@@ -147,7 +147,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#deleteLayer(org.opencv.dnn.DictValue)">deleteLayer</a></strong>(<a href="../../../org/opencv/dnn/DictValue.html" title="class in org.opencv.dnn">DictValue</a>&nbsp;layer)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#deleteLayer(org.DictValue)">deleteLayer</a></strong>(<a href="../../../org/opencv/dnn/DictValue.html" title="class in org.opencv.dnn">DictValue</a>&nbsp;layer)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -186,7 +186,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#getFLOPS(int,%20org.opencv.core.MatOfInt)">getFLOPS</a></strong>(int&nbsp;layerId,
+<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#getFLOPS(int,%20org.MatOfInt)">getFLOPS</a></strong>(int&nbsp;layerId,
         <a href="../../../org/opencv/core/MatOfInt.html" title="class in org.opencv.core">MatOfInt</a>&nbsp;netInputShape)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -195,11 +195,11 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#getFLOPS(org.opencv.core.MatOfInt)">getFLOPS</a></strong>(<a href="../../../org/opencv/core/MatOfInt.html" title="class in org.opencv.core">MatOfInt</a>&nbsp;netInputShape)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#getFLOPS(org.MatOfInt)">getFLOPS</a></strong>(<a href="../../../org/opencv/core/MatOfInt.html" title="class in org.opencv.core">MatOfInt</a>&nbsp;netInputShape)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/opencv/dnn/Layer.html" title="class in org.opencv.dnn">Layer</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#getLayer(org.opencv.dnn.DictValue)">getLayer</a></strong>(<a href="../../../org/opencv/dnn/DictValue.html" title="class in org.opencv.dnn">DictValue</a>&nbsp;layerId)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#getLayer(org.DictValue)">getLayer</a></strong>(<a href="../../../org/opencv/dnn/DictValue.html" title="class in org.opencv.dnn">DictValue</a>&nbsp;layerId)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
@@ -226,14 +226,14 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#getMemoryConsumption(int,%20org.opencv.core.MatOfInt,%20long[],%20long[])">getMemoryConsumption</a></strong>(int&nbsp;layerId,
+<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#getMemoryConsumption(int,%20org.MatOfInt,%20long[],%20long[])">getMemoryConsumption</a></strong>(int&nbsp;layerId,
                     <a href="../../../org/opencv/core/MatOfInt.html" title="class in org.opencv.core">MatOfInt</a>&nbsp;netInputShape,
                     long[]&nbsp;weights,
                     long[]&nbsp;blobs)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#getMemoryConsumption(org.opencv.core.MatOfInt,%20long[],%20long[])">getMemoryConsumption</a></strong>(<a href="../../../org/opencv/core/MatOfInt.html" title="class in org.opencv.core">MatOfInt</a>&nbsp;netInputShape,
+<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#getMemoryConsumption(org.MatOfInt,%20long[],%20long[])">getMemoryConsumption</a></strong>(<a href="../../../org/opencv/core/MatOfInt.html" title="class in org.opencv.core">MatOfInt</a>&nbsp;netInputShape,
                     long[]&nbsp;weights,
                     long[]&nbsp;blobs)</code>&nbsp;</td>
 </tr>
@@ -243,16 +243,16 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#getParam(org.opencv.dnn.DictValue)">getParam</a></strong>(<a href="../../../org/opencv/dnn/DictValue.html" title="class in org.opencv.dnn">DictValue</a>&nbsp;layer)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#getParam(org.DictValue)">getParam</a></strong>(<a href="../../../org/opencv/dnn/DictValue.html" title="class in org.opencv.dnn">DictValue</a>&nbsp;layer)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#getParam(org.opencv.dnn.DictValue,%20int)">getParam</a></strong>(<a href="../../../org/opencv/dnn/DictValue.html" title="class in org.opencv.dnn">DictValue</a>&nbsp;layer,
+<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#getParam(org.DictValue,%20int)">getParam</a></strong>(<a href="../../../org/opencv/dnn/DictValue.html" title="class in org.opencv.dnn">DictValue</a>&nbsp;layer,
         int&nbsp;numParam)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#getPerfProfile(org.opencv.core.MatOfDouble)">getPerfProfile</a></strong>(<a href="../../../org/opencv/core/MatOfDouble.html" title="class in org.opencv.core">MatOfDouble</a>&nbsp;timings)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#getPerfProfile(org.MatOfDouble)">getPerfProfile</a></strong>(<a href="../../../org/opencv/core/MatOfDouble.html" title="class in org.opencv.core">MatOfDouble</a>&nbsp;timings)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/opencv/core/MatOfInt.html" title="class in org.opencv.core">MatOfInt</a></code></td>
@@ -264,11 +264,11 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#setInput(org.opencv.core.Mat)">setInput</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;blob)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#setInput(org.Mat)">setInput</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;blob)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#setInput(org.opencv.core.Mat,%20java.lang.String)">setInput</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;blob,
+<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#setInput(org.Mat,%20java.lang.String)">setInput</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;blob,
         java.lang.String&nbsp;name)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -277,7 +277,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#setParam(org.opencv.dnn.DictValue,%20int,%20org.opencv.core.Mat)">setParam</a></strong>(<a href="../../../org/opencv/dnn/DictValue.html" title="class in org.opencv.dnn">DictValue</a>&nbsp;layer,
+<td class="colLast"><code><strong><a href="../../../org/opencv/dnn/Net.html#setParam(org.DictValue,%20int,%20org.Mat)">setParam</a></strong>(<a href="../../../org/opencv/dnn/DictValue.html" title="class in org.opencv.dnn">DictValue</a>&nbsp;layer,
         int&nbsp;numParam,
         <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;blob)</code>&nbsp;</td>
 </tr>
@@ -347,7 +347,7 @@ extends java.lang.Object</pre>
            java.lang.String&nbsp;inpPin)</pre>
 </li>
 </ul>
-<a name="deleteLayer(org.opencv.dnn.DictValue)">
+<a name="deleteLayer(org.DictValue)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -431,7 +431,7 @@ extends java.lang.Object</pre>
             java.util.List&lt;<a href="../../../org/opencv/core/MatOfInt.html" title="class in org.opencv.core">MatOfInt</a>&gt;&nbsp;netInputShapes)</pre>
 </li>
 </ul>
-<a name="getFLOPS(int, org.opencv.core.MatOfInt)">
+<a name="getFLOPS(int, org.MatOfInt)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -450,7 +450,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;long&nbsp;getFLOPS(java.util.List&lt;<a href="../../../org/opencv/core/MatOfInt.html" title="class in org.opencv.core">MatOfInt</a>&gt;&nbsp;netInputShapes)</pre>
 </li>
 </ul>
-<a name="getFLOPS(org.opencv.core.MatOfInt)">
+<a name="getFLOPS(org.MatOfInt)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -459,7 +459,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;long&nbsp;getFLOPS(<a href="../../../org/opencv/core/MatOfInt.html" title="class in org.opencv.core">MatOfInt</a>&nbsp;netInputShape)</pre>
 </li>
 </ul>
-<a name="getLayer(org.opencv.dnn.DictValue)">
+<a name="getLayer(org.DictValue)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -516,7 +516,7 @@ extends java.lang.Object</pre>
                         long[]&nbsp;blobs)</pre>
 </li>
 </ul>
-<a name="getMemoryConsumption(int, org.opencv.core.MatOfInt, long[], long[])">
+<a name="getMemoryConsumption(int, org.MatOfInt, long[], long[])">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -528,7 +528,7 @@ extends java.lang.Object</pre>
                         long[]&nbsp;blobs)</pre>
 </li>
 </ul>
-<a name="getMemoryConsumption(org.opencv.core.MatOfInt, long[], long[])">
+<a name="getMemoryConsumption(org.MatOfInt, long[], long[])">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -548,7 +548,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;long&nbsp;getNativeObjAddr()</pre>
 </li>
 </ul>
-<a name="getParam(org.opencv.dnn.DictValue)">
+<a name="getParam(org.DictValue)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -557,7 +557,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;getParam(<a href="../../../org/opencv/dnn/DictValue.html" title="class in org.opencv.dnn">DictValue</a>&nbsp;layer)</pre>
 </li>
 </ul>
-<a name="getParam(org.opencv.dnn.DictValue, int)">
+<a name="getParam(org.DictValue, int)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -567,7 +567,7 @@ extends java.lang.Object</pre>
            int&nbsp;numParam)</pre>
 </li>
 </ul>
-<a name="getPerfProfile(org.opencv.core.MatOfDouble)">
+<a name="getPerfProfile(org.MatOfDouble)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -594,7 +594,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;void&nbsp;setHalideScheduler(java.lang.String&nbsp;scheduler)</pre>
 </li>
 </ul>
-<a name="setInput(org.opencv.core.Mat)">
+<a name="setInput(org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -603,7 +603,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;void&nbsp;setInput(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;blob)</pre>
 </li>
 </ul>
-<a name="setInput(org.opencv.core.Mat, java.lang.String)">
+<a name="setInput(org.Mat, java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -622,7 +622,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;void&nbsp;setInputsNames(java.util.List&lt;java.lang.String&gt;&nbsp;inputBlobNames)</pre>
 </li>
 </ul>
-<a name="setParam(org.opencv.dnn.DictValue, int, org.opencv.core.Mat)">
+<a name="setParam(org.DictValue, int, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">

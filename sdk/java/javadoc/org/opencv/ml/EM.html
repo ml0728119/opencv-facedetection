@@ -90,13 +90,13 @@
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../org/opencv/core/Algorithm.html" title="class in org.opencv.core">org.opencv.core.Algorithm</a></li>
+<li><a href="../../../org/opencv/core/Algorithm.html" title="class in org.opencv.core">org.Algorithm</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../org/opencv/ml/StatModel.html" title="class in org.opencv.ml">org.opencv.ml.StatModel</a></li>
+<li><a href="../../../org/opencv/ml/StatModel.html" title="class in org.opencv.ml">org.StatModel</a></li>
 <li>
 <ul class="inheritance">
-<li>org.opencv.ml.EM</li>
+<li>org.EM</li>
 </ul>
 </li>
 </ul>
@@ -167,7 +167,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="fields_inherited_from_class_org.opencv.ml.StatModel">
+<li class="blockList"><a name="fields_inherited_from_class_org.StatModel">
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.opencv.ml.<a href="../../../org/opencv/ml/StatModel.html" title="class in org.opencv.ml">StatModel</a></h3>
@@ -230,17 +230,17 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>float</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#predict(org.opencv.core.Mat)">predict</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#predict(org.Mat)">predict</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>float</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#predict(org.opencv.core.Mat,%20org.opencv.core.Mat,%20int)">predict</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples,
+<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#predict(org.Mat,%20org.Mat,%20int)">predict</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples,
        <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;results,
        int&nbsp;flags)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>double[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#predict2(org.opencv.core.Mat,%20org.opencv.core.Mat)">predict2</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;sample,
+<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#predict2(org.Mat,%20org.Mat)">predict2</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;sample,
         <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;probs)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -253,16 +253,16 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#setTermCriteria(org.opencv.core.TermCriteria)">setTermCriteria</a></strong>(<a href="../../../org/opencv/core/TermCriteria.html" title="class in org.opencv.core">TermCriteria</a>&nbsp;val)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#setTermCriteria(org.TermCriteria)">setTermCriteria</a></strong>(<a href="../../../org/opencv/core/TermCriteria.html" title="class in org.opencv.core">TermCriteria</a>&nbsp;val)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#trainE(org.opencv.core.Mat,%20org.opencv.core.Mat)">trainE</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples,
+<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#trainE(org.Mat,%20org.Mat)">trainE</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples,
       <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;means0)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#trainE(org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat)">trainE</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples,
+<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#trainE(org.Mat,%20org.Mat,%20org.Mat,%20org.Mat,%20org.Mat,%20org.Mat,%20org.Mat)">trainE</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples,
       <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;means0,
       <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;covs0,
       <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;weights0,
@@ -272,23 +272,23 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#trainEM(org.opencv.core.Mat)">trainEM</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#trainEM(org.Mat)">trainEM</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#trainEM(org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat)">trainEM</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples,
+<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#trainEM(org.Mat,%20org.Mat,%20org.Mat,%20org.Mat)">trainEM</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples,
        <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;logLikelihoods,
        <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;labels,
        <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;probs)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#trainM(org.opencv.core.Mat,%20org.opencv.core.Mat)">trainM</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples,
+<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#trainM(org.Mat,%20org.Mat)">trainM</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples,
       <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;probs0)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#trainM(org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat)">trainM</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples,
+<td class="colLast"><code><strong><a href="../../../org/opencv/ml/EM.html#trainM(org.Mat,%20org.Mat,%20org.Mat,%20org.Mat,%20org.Mat)">trainM</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples,
       <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;probs0,
       <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;logLikelihoods,
       <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;labels,
@@ -296,14 +296,14 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_org.opencv.ml.StatModel">
+<li class="blockList"><a name="methods_inherited_from_class_org.StatModel">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.opencv.ml.<a href="../../../org/opencv/ml/StatModel.html" title="class in org.opencv.ml">StatModel</a></h3>
-<code><a href="../../../org/opencv/ml/StatModel.html#calcError(org.opencv.ml.TrainData,%20boolean,%20org.opencv.core.Mat)">calcError</a>, <a href="../../../org/opencv/ml/StatModel.html#empty()">empty</a>, <a href="../../../org/opencv/ml/StatModel.html#getVarCount()">getVarCount</a>, <a href="../../../org/opencv/ml/StatModel.html#isClassifier()">isClassifier</a>, <a href="../../../org/opencv/ml/StatModel.html#isTrained()">isTrained</a>, <a href="../../../org/opencv/ml/StatModel.html#train(org.opencv.core.Mat,%20int,%20org.opencv.core.Mat)">train</a>, <a href="../../../org/opencv/ml/StatModel.html#train(org.opencv.ml.TrainData)">train</a>, <a href="../../../org/opencv/ml/StatModel.html#train(org.opencv.ml.TrainData,%20int)">train</a></code></li>
+<code><a href="../../../org/opencv/ml/StatModel.html#calcError(org.TrainData,%20boolean,%20org.Mat)">calcError</a>, <a href="../../../org/opencv/ml/StatModel.html#empty()">empty</a>, <a href="../../../org/opencv/ml/StatModel.html#getVarCount()">getVarCount</a>, <a href="../../../org/opencv/ml/StatModel.html#isClassifier()">isClassifier</a>, <a href="../../../org/opencv/ml/StatModel.html#isTrained()">isTrained</a>, <a href="../../../org/opencv/ml/StatModel.html#train(org.Mat,%20int,%20org.Mat)">train</a>, <a href="../../../org/opencv/ml/StatModel.html#train(org.TrainData)">train</a>, <a href="../../../org/opencv/ml/StatModel.html#train(org.TrainData,%20int)">train</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_org.opencv.core.Algorithm">
+<li class="blockList"><a name="methods_inherited_from_class_org.Algorithm">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.opencv.core.<a href="../../../org/opencv/core/Algorithm.html" title="class in org.opencv.core">Algorithm</a></h3>
@@ -337,7 +337,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 <li class="blockList">
 <h4>COV_MAT_DEFAULT</h4>
 <pre>public static final&nbsp;int COV_MAT_DEFAULT</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.ml.EM.COV_MAT_DEFAULT">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.EM.COV_MAT_DEFAULT">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="COV_MAT_DIAGONAL">
@@ -347,7 +347,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 <li class="blockList">
 <h4>COV_MAT_DIAGONAL</h4>
 <pre>public static final&nbsp;int COV_MAT_DIAGONAL</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.ml.EM.COV_MAT_DIAGONAL">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.EM.COV_MAT_DIAGONAL">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="COV_MAT_GENERIC">
@@ -357,7 +357,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 <li class="blockList">
 <h4>COV_MAT_GENERIC</h4>
 <pre>public static final&nbsp;int COV_MAT_GENERIC</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.ml.EM.COV_MAT_GENERIC">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.EM.COV_MAT_GENERIC">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="COV_MAT_SPHERICAL">
@@ -367,7 +367,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 <li class="blockList">
 <h4>COV_MAT_SPHERICAL</h4>
 <pre>public static final&nbsp;int COV_MAT_SPHERICAL</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.ml.EM.COV_MAT_SPHERICAL">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.EM.COV_MAT_SPHERICAL">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="DEFAULT_MAX_ITERS">
@@ -377,7 +377,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 <li class="blockList">
 <h4>DEFAULT_MAX_ITERS</h4>
 <pre>public static final&nbsp;int DEFAULT_MAX_ITERS</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.ml.EM.DEFAULT_MAX_ITERS">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.EM.DEFAULT_MAX_ITERS">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="DEFAULT_NCLUSTERS">
@@ -387,7 +387,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 <li class="blockList">
 <h4>DEFAULT_NCLUSTERS</h4>
 <pre>public static final&nbsp;int DEFAULT_NCLUSTERS</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.ml.EM.DEFAULT_NCLUSTERS">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.EM.DEFAULT_NCLUSTERS">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="START_AUTO_STEP">
@@ -397,7 +397,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 <li class="blockList">
 <h4>START_AUTO_STEP</h4>
 <pre>public static final&nbsp;int START_AUTO_STEP</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.ml.EM.START_AUTO_STEP">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.EM.START_AUTO_STEP">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="START_E_STEP">
@@ -407,7 +407,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 <li class="blockList">
 <h4>START_E_STEP</h4>
 <pre>public static final&nbsp;int START_E_STEP</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.ml.EM.START_E_STEP">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.EM.START_E_STEP">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="START_M_STEP">
@@ -417,7 +417,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 <li class="blockList">
 <h4>START_M_STEP</h4>
 <pre>public static final&nbsp;int START_M_STEP</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.opencv.ml.EM.START_M_STEP">Constant Field Values</a></dd></dl>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.EM.START_M_STEP">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 </li>
@@ -519,7 +519,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
       java.lang.String&nbsp;nodeName)</pre>
 </li>
 </ul>
-<a name="predict(org.opencv.core.Mat)">
+<a name="predict(org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -528,11 +528,11 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 <pre>public&nbsp;float&nbsp;predict(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples)</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../../org/opencv/ml/StatModel.html#predict(org.opencv.core.Mat)">predict</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/opencv/ml/StatModel.html" title="class in org.opencv.ml">StatModel</a></code></dd>
+<dd><code><a href="../../../org/opencv/ml/StatModel.html#predict(org.Mat)">predict</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/opencv/ml/StatModel.html" title="class in org.opencv.ml">StatModel</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="predict(org.opencv.core.Mat, org.opencv.core.Mat, int)">
+<a name="predict(org.Mat, org.Mat, int)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -543,11 +543,11 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
             int&nbsp;flags)</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../../org/opencv/ml/StatModel.html#predict(org.opencv.core.Mat,%20org.opencv.core.Mat,%20int)">predict</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/opencv/ml/StatModel.html" title="class in org.opencv.ml">StatModel</a></code></dd>
+<dd><code><a href="../../../org/opencv/ml/StatModel.html#predict(org.Mat,%20org.Mat,%20int)">predict</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/opencv/ml/StatModel.html" title="class in org.opencv.ml">StatModel</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="predict2(org.opencv.core.Mat, org.opencv.core.Mat)">
+<a name="predict2(org.Mat, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -575,7 +575,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 <pre>public&nbsp;void&nbsp;setCovarianceMatrixType(int&nbsp;val)</pre>
 </li>
 </ul>
-<a name="setTermCriteria(org.opencv.core.TermCriteria)">
+<a name="setTermCriteria(org.TermCriteria)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -584,7 +584,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 <pre>public&nbsp;void&nbsp;setTermCriteria(<a href="../../../org/opencv/core/TermCriteria.html" title="class in org.opencv.core">TermCriteria</a>&nbsp;val)</pre>
 </li>
 </ul>
-<a name="trainE(org.opencv.core.Mat, org.opencv.core.Mat)">
+<a name="trainE(org.Mat, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -594,7 +594,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
              <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;means0)</pre>
 </li>
 </ul>
-<a name="trainE(org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat)">
+<a name="trainE(org.Mat, org.Mat, org.Mat, org.Mat, org.Mat, org.Mat, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -609,7 +609,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
              <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;probs)</pre>
 </li>
 </ul>
-<a name="trainEM(org.opencv.core.Mat)">
+<a name="trainEM(org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -618,7 +618,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
 <pre>public&nbsp;boolean&nbsp;trainEM(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples)</pre>
 </li>
 </ul>
-<a name="trainEM(org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat)">
+<a name="trainEM(org.Mat, org.Mat, org.Mat, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -630,7 +630,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
               <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;probs)</pre>
 </li>
 </ul>
-<a name="trainM(org.opencv.core.Mat, org.opencv.core.Mat)">
+<a name="trainM(org.Mat, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -640,7 +640,7 @@ extends <a href="../../../org/opencv/ml/StatModel.html" title="class in org.open
              <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;probs0)</pre>
 </li>
 </ul>
-<a name="trainM(org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat)">
+<a name="trainM(org.Mat, org.Mat, org.Mat, org.Mat, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockListLast">

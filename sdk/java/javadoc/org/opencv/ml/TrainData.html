@@ -90,7 +90,7 @@
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>org.opencv.ml.TrainData</li>
+<li>org.TrainData</li>
 </ul>
 </li>
 </ul>
@@ -125,13 +125,13 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../org/opencv/ml/TrainData.html" title="class in org.opencv.ml">TrainData</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/ml/TrainData.html#create(org.opencv.core.Mat,%20int,%20org.opencv.core.Mat)">create</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples,
+<td class="colLast"><code><strong><a href="../../../org/opencv/ml/TrainData.html#create(org.Mat,%20int,%20org.Mat)">create</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples,
       int&nbsp;layout,
       <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;responses)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../org/opencv/ml/TrainData.html" title="class in org.opencv.ml">TrainData</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/ml/TrainData.html#create(org.opencv.core.Mat,%20int,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat)">create</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples,
+<td class="colLast"><code><strong><a href="../../../org/opencv/ml/TrainData.html#create(org.Mat,%20int,%20org.Mat,%20org.Mat,%20org.Mat,%20org.Mat,%20org.Mat)">create</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;samples,
       int&nbsp;layout,
       <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;responses,
       <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;varIdx,
@@ -209,7 +209,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/ml/TrainData.html#getSample(org.opencv.core.Mat,%20int,%20float)">getSample</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;varIdx,
+<td class="colLast"><code><strong><a href="../../../org/opencv/ml/TrainData.html#getSample(org.Mat,%20int,%20float)">getSample</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;varIdx,
          int&nbsp;sidx,
          float&nbsp;buf)</code>&nbsp;</td>
 </tr>
@@ -223,7 +223,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/ml/TrainData.html#getSubVector(org.opencv.core.Mat,%20org.opencv.core.Mat)">getSubVector</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;vec,
+<td class="colLast"><code><strong><a href="../../../org/opencv/ml/TrainData.html#getSubVector(org.Mat,%20org.Mat)">getSubVector</a></strong>(<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;vec,
             <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;idx)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -274,7 +274,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/ml/TrainData.html#getValues(int,%20org.opencv.core.Mat,%20float)">getValues</a></strong>(int&nbsp;vi,
+<td class="colLast"><code><strong><a href="../../../org/opencv/ml/TrainData.html#getValues(int,%20org.Mat,%20float)">getValues</a></strong>(int&nbsp;vi,
          <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;sidx,
          float&nbsp;values)</code>&nbsp;</td>
 </tr>
@@ -343,7 +343,7 @@ extends java.lang.Object</pre>
 <pre>public static&nbsp;<a href="../../../org/opencv/ml/TrainData.html" title="class in org.opencv.ml">TrainData</a>&nbsp;__fromPtr__(long&nbsp;addr)</pre>
 </li>
 </ul>
-<a name="create(org.opencv.core.Mat, int, org.opencv.core.Mat)">
+<a name="create(org.Mat, int, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -354,7 +354,7 @@ extends java.lang.Object</pre>
                <a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;responses)</pre>
 </li>
 </ul>
-<a name="create(org.opencv.core.Mat, int, org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat, org.opencv.core.Mat)">
+<a name="create(org.Mat, int, org.Mat, org.Mat, org.Mat, org.Mat, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -522,7 +522,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;int&nbsp;getResponseType()</pre>
 </li>
 </ul>
-<a name="getSample(org.opencv.core.Mat, int, float)">
+<a name="getSample(org.Mat, int, float)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -551,7 +551,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;getSampleWeights()</pre>
 </li>
 </ul>
-<a name="getSubVector(org.opencv.core.Mat, org.opencv.core.Mat)">
+<a name="getSubVector(org.Mat, org.Mat)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -662,7 +662,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;<a href="../../../org/opencv/core/Mat.html" title="class in org.opencv.core">Mat</a>&nbsp;getTrainSampleWeights()</pre>
 </li>
 </ul>
-<a name="getValues(int, org.opencv.core.Mat, float)">
+<a name="getValues(int, org.Mat, float)">
 <!--   -->
 </a>
 <ul class="blockList">

@@ -90,13 +90,13 @@
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../org/opencv/core/Algorithm.html" title="class in org.opencv.core">org.opencv.core.Algorithm</a></li>
+<li><a href="../../../org/opencv/core/Algorithm.html" title="class in org.opencv.core">org.Algorithm</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../org/opencv/video/SparseOpticalFlow.html" title="class in org.opencv.video">org.opencv.video.SparseOpticalFlow</a></li>
+<li><a href="../../../org/opencv/video/SparseOpticalFlow.html" title="class in org.opencv.video">org.SparseOpticalFlow</a></li>
 <li>
 <ul class="inheritance">
-<li>org.opencv.video.SparsePyrLKOpticalFlow</li>
+<li>org.SparsePyrLKOpticalFlow</li>
 </ul>
 </li>
 </ul>
@@ -139,7 +139,7 @@ extends <a href="../../../org/opencv/video/SparseOpticalFlow.html" title="class 
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../org/opencv/video/SparsePyrLKOpticalFlow.html" title="class in org.opencv.video">SparsePyrLKOpticalFlow</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/video/SparsePyrLKOpticalFlow.html#create(org.opencv.core.Size,%20int,%20org.opencv.core.TermCriteria,%20int,%20double)">create</a></strong>(<a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;winSize,
+<td class="colLast"><code><strong><a href="../../../org/opencv/video/SparsePyrLKOpticalFlow.html#create(org.Size,%20int,%20org.TermCriteria,%20int,%20double)">create</a></strong>(<a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;winSize,
       int&nbsp;maxLevel,
       <a href="../../../org/opencv/core/TermCriteria.html" title="class in org.opencv.core">TermCriteria</a>&nbsp;crit,
       int&nbsp;flags,
@@ -179,22 +179,22 @@ extends <a href="../../../org/opencv/video/SparseOpticalFlow.html" title="class 
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/video/SparsePyrLKOpticalFlow.html#setTermCriteria(org.opencv.core.TermCriteria)">setTermCriteria</a></strong>(<a href="../../../org/opencv/core/TermCriteria.html" title="class in org.opencv.core">TermCriteria</a>&nbsp;crit)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/opencv/video/SparsePyrLKOpticalFlow.html#setTermCriteria(org.TermCriteria)">setTermCriteria</a></strong>(<a href="../../../org/opencv/core/TermCriteria.html" title="class in org.opencv.core">TermCriteria</a>&nbsp;crit)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/opencv/video/SparsePyrLKOpticalFlow.html#setWinSize(org.opencv.core.Size)">setWinSize</a></strong>(<a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;winSize)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/opencv/video/SparsePyrLKOpticalFlow.html#setWinSize(org.Size)">setWinSize</a></strong>(<a href="../../../org/opencv/core/Size.html" title="class in org.opencv.core">Size</a>&nbsp;winSize)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_org.opencv.video.SparseOpticalFlow">
+<li class="blockList"><a name="methods_inherited_from_class_org.SparseOpticalFlow">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.opencv.video.<a href="../../../org/opencv/video/SparseOpticalFlow.html" title="class in org.opencv.video">SparseOpticalFlow</a></h3>
-<code><a href="../../../org/opencv/video/SparseOpticalFlow.html#calc(org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat)">calc</a>, <a href="../../../org/opencv/video/SparseOpticalFlow.html#calc(org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat,%20org.opencv.core.Mat)">calc</a></code></li>
+<code><a href="../../../org/opencv/video/SparseOpticalFlow.html#calc(org.Mat,%20org.Mat,%20org.Mat,%20org.Mat,%20org.Mat)">calc</a>, <a href="../../../org/opencv/video/SparseOpticalFlow.html#calc(org.Mat,%20org.Mat,%20org.Mat,%20org.Mat,%20org.Mat,%20org.Mat)">calc</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_org.opencv.core.Algorithm">
+<li class="blockList"><a name="methods_inherited_from_class_org.Algorithm">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.opencv.core.<a href="../../../org/opencv/core/Algorithm.html" title="class in org.opencv.core">Algorithm</a></h3>
@@ -239,7 +239,7 @@ extends <a href="../../../org/opencv/video/SparseOpticalFlow.html" title="class 
 <pre>public static&nbsp;<a href="../../../org/opencv/video/SparsePyrLKOpticalFlow.html" title="class in org.opencv.video">SparsePyrLKOpticalFlow</a>&nbsp;create()</pre>
 </li>
 </ul>
-<a name="create(org.opencv.core.Size, int, org.opencv.core.TermCriteria, int, double)">
+<a name="create(org.Size, int, org.TermCriteria, int, double)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -324,7 +324,7 @@ extends <a href="../../../org/opencv/video/SparseOpticalFlow.html" title="class 
 <pre>public&nbsp;void&nbsp;setMinEigThreshold(double&nbsp;minEigThreshold)</pre>
 </li>
 </ul>
-<a name="setTermCriteria(org.opencv.core.TermCriteria)">
+<a name="setTermCriteria(org.TermCriteria)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -333,7 +333,7 @@ extends <a href="../../../org/opencv/video/SparseOpticalFlow.html" title="class 
 <pre>public&nbsp;void&nbsp;setTermCriteria(<a href="../../../org/opencv/core/TermCriteria.html" title="class in org.opencv.core">TermCriteria</a>&nbsp;crit)</pre>
 </li>
 </ul>
-<a name="setWinSize(org.opencv.core.Size)">
+<a name="setWinSize(org.Size)">
 <!--   -->
 </a>
 <ul class="blockListLast">
