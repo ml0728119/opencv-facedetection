@@ -20,11 +20,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+    splits {
+        abi {
+            enable true
+            reset()
 
+            include "armeabi-v7a" //gradle.properties 中切换
+            universalApk false
+            //generate an additional APK that contains all the ABIs
+        }
+    }
 
 }
 
 dependencies {
         implementation project(':facedetectorlibraray')
-//    api 'com.hxqc:FaceDetector:0.0.2'
+//    api 'com.hxqc:FaceDetector:0.0.4'
 }

@@ -7,12 +7,13 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 
+import com.hxqc.facedetect.FRCaptureFaceListener;
 import com.hxqc.facedetect.FaceDetectorCameraView;
 
 import org.opencv.DebugLog;
 import org.opencv.android.CameraBridgeViewBase;
 
-public class FdActivity extends Activity {
+public class FdActivity extends Activity implements FRCaptureFaceListener {
 
 	private static final String TAG = "OCVSample::Activity";
 
@@ -36,10 +37,13 @@ public class FdActivity extends Activity {
 		DebugLog.e("JavaCameraView", "etDefaultDisplay().getRotatio()" + this.getWindowManager().getDefaultDisplay().getRotation());
 
 		mOpenCvCameraView = (FaceDetectorCameraView) findViewById(R.id.fd_activity_surface_view);
+//		mOpenCvCameraView = new FaceDetectorCameraView(this, 98);
+//		((ViewGroup) findViewById(R.id.aaaa)).addView(mOpenCvCameraView);
 		mOpenCvCameraView.setVisibility(CameraBridgeViewBase.VISIBLE);
 		mOpenCvCameraView.setCameraIndex(CameraBridgeViewBase.CAMERA_ID_FRONT);
 		mOpenCvCameraView.setMaxFrameSize(720, 720);
-
+		mOpenCvCameraView.setFrCaptureListener(this);
+//
 
 	}
 
@@ -64,6 +68,7 @@ public class FdActivity extends Activity {
 
 
 	public void save(View view) {
+		mOpenCvCameraView.disableFpsMeter();
 	}
 
 
@@ -74,6 +79,17 @@ public class FdActivity extends Activity {
 
 	public void start(View view) {
 		mOpenCvCameraView.enableView();
+	}
+
+
+	@Override
+	public void captureFaceOK(String picPath) {
+		DebugLog.i("KK", picPath);
+	}
+
+	@Override
+	public void captureFaceProgress(int status) {
+		DebugLog.i("KK", "status -------"+status);
 	}
 
 

@@ -179,10 +179,14 @@ public class JavaCameraView extends CameraBridgeViewBase implements PreviewCallb
 					mFrameWidth = params.getPreviewSize().width;
 					mFrameHeight = params.getPreviewSize().height;
 
+
+					DebugLog.e("JavaCameraView","frame  "+mFrameHeight+"   "+mFrameWidth);
+					DebugLog.e("JavaCameraView","height  "+height+"   "+width);
 					if ((getLayoutParams().width == LayoutParams.MATCH_PARENT) && (getLayoutParams().height == LayoutParams.MATCH_PARENT))
 						mScale = Math.min(((float) height) / mFrameHeight, ((float) width) / mFrameWidth);
 					else
 						mScale = 0;
+//						mScale = Math.min(((float) height) / mFrameHeight, ((float) width) / mFrameWidth);
 
 					if (mFpsMeter != null) {
 						mFpsMeter.setResolution(mFrameWidth, mFrameHeight);
@@ -205,6 +209,7 @@ public class JavaCameraView extends CameraBridgeViewBase implements PreviewCallb
 					mCameraFrame = new JavaCameraFrame[2];
 					mCameraFrame[0] = new JavaCameraFrame(mFrameChain[0], mFrameWidth, mFrameHeight);
 					mCameraFrame[1] = new JavaCameraFrame(mFrameChain[1], mFrameWidth, mFrameHeight);
+
 
 					mCamera.setDisplayOrientation(90);
 					if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {

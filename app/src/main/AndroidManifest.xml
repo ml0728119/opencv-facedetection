@@ -5,6 +5,9 @@
           android:versionName="3.01">
 
     <application
+        android:allowBackup="true"
+
+        android:supportsRtl="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">

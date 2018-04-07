@@ -1,7 +1,7 @@
 package com.hxqc.facedetect;
 
 import android.content.Context;
-import android.graphics.Bitmap;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
@@ -12,7 +12,6 @@ import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
 import org.opencv.android.JavaCameraView;
 import org.opencv.android.LoaderCallbackInterface;
-import org.opencv.android.Utils;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfRect;
@@ -36,8 +35,7 @@ import java.util.ArrayList;
 
 public class FaceDetectorCameraView extends JavaCameraView implements CameraBridgeViewBase.CvCameraViewListener2 {
 	private static final String TAG = "OCVSample::Activity";
-	private Mat mRgba;
-	private Mat mGray;
+
 	private static final Scalar FACE_RECT_COLOR = new Scalar(0, 255, 0, 255);
 	private static final Scalar EYE_RECT_COLOR = new Scalar(255, 0, 0, 255);
 	private float mRelativeFaceSize = 0.2f;
@@ -53,9 +51,50 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 	DetectionBasedTracker mFaceNativeDetector;
 	DetectionBasedTracker mEyesNativeDetector;
 
+	public static final int FRCaptureFaceStatusOK = 0;          //检测完成
+	public static final int FRCaptureFaceStatusNoFace = 1;       //未检测到脸
+	public static final int FRCaptureFaceStatusMoreThanOneFace = 2;     //有多张脸
+	public static final int FRCaptureFaceStatusNoBlink = 3;      //未眨眼
+	public static final int FRCaptureFaceStatusNoCamera = 4;     //无权限
+	public static final int FRCaptureFaceStatusIllegalData = 5;  //检测非法
+
+	FRCaptureFaceListener mFrCaptureListener;
+
+	public FRCaptureFaceListener getFrCaptureListener() {
+		return mFrCaptureListener;
+	}
+
+	public void setFrCaptureListener(FRCaptureFaceListener mFrCaptureListener) {
+		this.mFrCaptureListener = mFrCaptureListener;
+	}
+
+	Handler mHandler = new Handler(new Handler.Callback() {
+		@Override
+		public boolean handleMessage(Message msg) {
+			switch (msg.what) {
+				case FRCaptureFaceStatusOK:
+					disableView();
+					Bundle data = msg.getData();
+					String filePath = data.getString("picPath");
+					if (mFrCaptureListener != null) {
+						mFrCaptureListener.captureFaceOK(filePath);
+					}
+				default:
+					if (mFrCaptureListener != null) {
+						mFrCaptureListener.captureFaceProgress(msg.what);
+					}
+					break;
+			}
+			return false;
+		}
+	});
+
 	public FaceDetectorCameraView(Context context, int cameraId) {
 		super(context, cameraId);
+		init();
+		setCvCameraViewListener(this);
 	}
+
 
 	public FaceDetectorCameraView(Context context, AttributeSet attrs) {
 		super(context, attrs);
@@ -112,7 +151,7 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 
 	private void createFaceDetector() throws IOException {
 //		haarcascade_frontalface_alt2.xml  脸
-		String mCascadeFileAbsolutePath = saveCascadeFace(getContext(), "haarcascade_frontalface_alt2.xml");
+		String mCascadeFileAbsolutePath = saveCascadeFaceModel(getContext(), "haarcascade_frontalface_alt2.xml");
 		if (mDetectorType == JAVA_DETECTOR) {
 			mFaceJavaDetector = new CascadeClassifier(mCascadeFileAbsolutePath);
 			if (mFaceJavaDetector.empty()) {
@@ -127,7 +166,7 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 
 	private void createEyeDetector() throws IOException {
 //		haarcascade_eye_tree_eyeglasses.xml 眼睛
-		String mCascadeFileAbsolutePath = saveCascadeFace(getContext(), "haarcascade_eye_tree_eyeglasses.xml");
+		String mCascadeFileAbsolutePath = saveCascadeFaceModel(getContext(), "haarcascade_eye_tree_eyeglasses.xml");
 		if (mDetectorType == JAVA_DETECTOR) {
 			mEyeJavaDetector = new CascadeClassifier(mCascadeFileAbsolutePath);
 			if (mEyeJavaDetector.empty()) {
@@ -138,9 +177,10 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 			mEyesNativeDetector.start();
 		}
 
+
 	}
 
-	private String saveCascadeFace(Context context, String cascadeName) throws IOException {
+	private String saveCascadeFaceModel(Context context, String cascadeName) throws IOException {
 
 		int resID = context.getResources().getIdentifier(cascadeName.replace(".xml", ""), "raw", context.getPackageName());
 //		R.raw.lbpcascade_frontalface
@@ -167,14 +207,19 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 
 	@Override
 	public void onCameraViewStopped() {
+
 		mGray.release();
 		mRgba.release();
 	}
 
+	Mat mRgba;
+	Mat mGray;
 	int i = 0;
 
 	@Override
 	public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
+
+
 		mRgba = inputFrame.rgba();
 		mGray = inputFrame.gray();
 		//竖屏翻转
@@ -191,18 +236,21 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 
 		i++;
 		if (i % 3 == 0) {
+			detectorFace(mRgba, mGray);
+			return mRgba;
+		} else {
+
 			return mRgba;
 		}
-		detectorFace();
-		return mRgba;
+
 	}
 
 	/**
 	 * 识别脸部
 	 */
-	private void detectorFace() {
+	private void detectorFace(Mat rgbaMat, Mat grayMat) {
 		if (mAbsoluteFaceSize == 0) {
-			int height = mGray.rows();
+			int height = grayMat.rows();
 			if (Math.round(height * mRelativeFaceSize) > 0) {
 				mAbsoluteFaceSize = Math.round(height * mRelativeFaceSize);
 			}
@@ -212,23 +260,28 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 		MatOfRect faces = new MatOfRect();
 		if (mDetectorType == JAVA_DETECTOR) {
 			if (mFaceJavaDetector != null)
-				mFaceJavaDetector.detectMultiScale(mGray, faces, 1.1, 2, 0, // TODO: objdetect.CV_HAAR_SCALE_IMAGE
+				mFaceJavaDetector.detectMultiScale(grayMat, faces, 1.1, 2, 0, // TODO: objdetect.CV_HAAR_SCALE_IMAGE
 						new Size(mAbsoluteFaceSize, mAbsoluteFaceSize), new Size());
 		} else {
-			mFaceNativeDetector.detect(mGray, faces);
+			mFaceNativeDetector.detect(grayMat, faces);
 		}
 
 		Rect[] facesArray = faces.toArray();
-		if (facesArray.length >= 1) {
-			detectorEye(mRgba);
+		if (facesArray.length == 1) {
+			mHandler.sendEmptyMessage(FRCaptureFaceStatusNoBlink);
+			detectorEye(rgbaMat, grayMat);
+		} else if (facesArray.length > 1) {
+			mHandler.sendEmptyMessage(FRCaptureFaceStatusMoreThanOneFace);
+			clearEyeMat();
 		} else {
+			mHandler.sendEmptyMessage(FRCaptureFaceStatusNoFace);
 			clearEyeMat();
 		}
-		if (BuildConfig.DEBUG) {
+//		if (BuildConfig.DEBUG) {
 			for (Rect aFacesArray : facesArray) {
-				Imgproc.rectangle(mRgba, aFacesArray.tl(), aFacesArray.br(), FACE_RECT_COLOR, 3);
+				Imgproc.rectangle(rgbaMat, aFacesArray.tl(), aFacesArray.br(), FACE_RECT_COLOR, 3);
 			}
-		}
+//		}
 	}
 
 	/**
@@ -236,24 +289,31 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 	 *
 	 * @param rgbaMat
 	 */
-	private void detectorEye(Mat rgbaMat) {
+
+	private void detectorEye(Mat rgbaMat, Mat grayMat) {
+
 		MatOfRect eyesRA = new MatOfRect();
+
+//
 		if (mDetectorType == JAVA_DETECTOR) {
-			if (mEyeJavaDetector != null)
-				mEyeJavaDetector.detectMultiScale(mGray, eyesRA, 1.1, 2, 0, // TODO: objdetect.CV_HAAR_SCALE_IMAGE
+			if (mEyeJavaDetector != null) {
+				mEyeJavaDetector.detectMultiScale(grayMat, eyesRA, 1.1, 2, 0, // TODO: objdetect.CV_HAAR_SCALE_IMAGE
 						new Size(60, 60), new Size());
+			}
+
 		} else {
-			mEyesNativeDetector.detect(mGray, eyesRA);
+			mEyesNativeDetector.detect(grayMat, eyesRA);
 		}
 		Rect[] eyeArray = eyesRA.toArray();
-		if (BuildConfig.DEBUG) {
+//		if (BuildConfig.DEBUG) {
 			for (Rect anEyeArray : eyeArray) {
-				Imgproc.rectangle(mRgba, anEyeArray.tl(), anEyeArray.br(), EYE_RECT_COLOR, 3);
+				Imgproc.rectangle(rgbaMat, anEyeArray.tl(), anEyeArray.br(), EYE_RECT_COLOR, 3);
 			}
-		}
+//		}
 		blink(rgbaMat, eyeArray.length);
 	}
 
+	private ArrayList<EyeRectMat> faceMat = new ArrayList<>();
 	private ArrayList<EyeRectMat> blinkMat = new ArrayList<>();
 
 	private int blinkLastEyeCount = -1;//识别栈最后一帧眼睛个数
@@ -296,24 +356,23 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 				blinkMat.get(1).eyesCount == 0 && blinkMat.get(2).eyesCount > 0 &&
 				blinkMat.get(3).eyesCount > 0) {
 			DebugLog.e("Activity", "---------------识别成功");
-			toSaveMat(rgbaMat);
+			String filePath = SaveMat.toSaveMat(getContext(), rgbaMat);
 			blinkMat.clear();
-			handler.sendEmptyMessage(0);
+
+			Message message = new Message();
+			message.what = FRCaptureFaceStatusOK;
+			Bundle bundle = new Bundle();
+			bundle.putString("picPath", filePath);
+			message.setData(bundle);
+			mHandler.sendMessage(message);
 		}
 
 	}
 
-	Handler handler = new Handler(new Handler.Callback() {
-		@Override
-		public boolean handleMessage(Message msg) {
-			disableView();
-			return false;
-		}
-	});
-
 
 	class EyeRectMat {
 		Mat rgbaMat;
+		Mat grayMat;
 		int eyesCount;
 
 		EyeRectMat(Mat rgbaMat, int eyesCount) {
@@ -323,22 +382,4 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 	}
 
 
-	private void toSaveMat(Mat mat) {
-
-		Mat dstMat = mat.clone();
-		if (mat.width() > mat.height()) {
-			Size rSize = new Size(mat.size().height, mat.size().width);
-			Imgproc.resize(mat, dstMat, rSize, 0.0D, 0.0D, 0); //将转置后的图像缩放为mRgbaF的大小
-		}
-		Bitmap mCacheBitmap = Bitmap.createBitmap(dstMat.width(), dstMat.height(), Bitmap.Config.ARGB_8888);
-		Utils.matToBitmap(dstMat, mCacheBitmap);
-
-		String filePath = getContext().getCacheDir() + "/" + System.currentTimeMillis() + ".jpg";
-		DebugLog.e("CameraBridge", "file  " + filePath);
-		try {
-			a.saveQualityBitmap(filePath, mCacheBitmap);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
 }

@@ -427,22 +427,22 @@ public abstract class CameraBridgeViewBase extends SurfaceView implements Surfac
 				//--------------------------
 
 				if (mScale != 0) {
-					DebugLog.e("TAG", "kkkkkkkkkkkkk   " + mCacheBitmap.getWidth() + "  " + mCacheBitmap.getHeight());
 					Rect src = new Rect(0, 0, mCacheBitmap.getWidth(), mCacheBitmap.getHeight());
 					Rect dst = new Rect((int) ((canvas.getWidth() - mScale * mCacheBitmap.getWidth()) / 2),
 							(int) ((canvas.getHeight() - mScale * mCacheBitmap.getHeight()) / 2),
 							(int) ((canvas.getWidth() - mScale * mCacheBitmap.getWidth()) / 2 + mScale * mCacheBitmap.getWidth()),
 							(int) ((canvas.getHeight() - mScale * mCacheBitmap.getHeight()) / 2 + mScale * mCacheBitmap.getHeight()));
-
+//					Rect dst = new Rect(0, 0,
+//							canvas.getWidth(), canvas.getHeight());
 					canvas.drawBitmap(mCacheBitmap, src, dst, null);
 				} else {
-					DebugLog.e("TAG", "AAAAAAAAAAAA     " + mCacheBitmap.getWidth() + "  " + mCacheBitmap.getHeight());
-					Rect src = new Rect(0, 0, mCacheBitmap.getWidth(), mCacheBitmap.getHeight());
+					Rect src = new Rect(0, 0, mCacheBitmap.getWidth() ,  mCacheBitmap.getHeight());
 					Rect dst = new Rect(
-							(canvas.getHeight() - mCacheBitmap.getHeight()) / 2, (canvas.getWidth() - mCacheBitmap.getWidth()) / 2,
+							(canvas.getHeight() - mCacheBitmap.getHeight()) / 2,
+							(canvas.getWidth() - mCacheBitmap.getWidth()) / 2,
 							(canvas.getHeight() - mCacheBitmap.getHeight()) / 2 + mCacheBitmap.getHeight(),
 							(canvas.getWidth() - mCacheBitmap.getWidth()) / 2 + mCacheBitmap.getWidth());
-//					Rect dst = new Rect(0, 0,480, 800);
+//					Rect dst = new Rect(0, 0, canvas.getWidth(), canvas.getHeight());
 					canvas.drawBitmap(mCacheBitmap, src, dst, null);
 				}
 
@@ -474,10 +474,11 @@ public abstract class CameraBridgeViewBase extends SurfaceView implements Surfac
 
 	// NOTE: On Android 4.1.x the function must be called before SurfaceTexture constructor!
 	protected void AllocateCache() {
-		DebugLog.i("JavaCameraView", "AllocateCache---------------");
+		DebugLog.i("JavaCameraView", "AllocateCache---------------" + getWidth() + "   " + getHeight());
 
 
 		mCacheBitmap = Bitmap.createBitmap(mFrameWidth, mFrameHeight, Bitmap.Config.ARGB_8888);
+//		mCacheBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
 	}
 
 	public interface ListItemAccessor {
