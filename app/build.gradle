@@ -20,16 +20,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
-    splits {
-        abi {
-            enable true
-            reset()
-
-            include "armeabi-v7a" //gradle.properties 中切换
-            universalApk false
-            //generate an additional APK that contains all the ABIs
-        }
-    }
+//    splits {
+//        abi {
+//            enable false
+//            reset()
+//
+//            include "armeabi-v7a" //gradle.properties 中切换
+//            universalApk true
+//            //generate an additional APK that contains all the ABIs
+//        }
+//    }
 
 }
 

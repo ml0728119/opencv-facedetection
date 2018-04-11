@@ -436,12 +436,16 @@ public abstract class CameraBridgeViewBase extends SurfaceView implements Surfac
 //							canvas.getWidth(), canvas.getHeight());
 					canvas.drawBitmap(mCacheBitmap, src, dst, null);
 				} else {
+					DebugLog.i("TAG", "--------------------------" );
+					DebugLog.e("TAG", "mCacheBitmap.getWidth() " + canvas.getWidth()+"  "+canvas.getHeight());
+					DebugLog.i("TAG", "mCacheBitmap.getWidth() " + mCacheBitmap.getWidth()+"  "+mCacheBitmap.getHeight());
+
 					Rect src = new Rect(0, 0, mCacheBitmap.getWidth() ,  mCacheBitmap.getHeight());
-					Rect dst = new Rect(
+					Rect dst = new Rect((canvas.getWidth() - mCacheBitmap.getWidth()) / 2,
 							(canvas.getHeight() - mCacheBitmap.getHeight()) / 2,
-							(canvas.getWidth() - mCacheBitmap.getWidth()) / 2,
-							(canvas.getHeight() - mCacheBitmap.getHeight()) / 2 + mCacheBitmap.getHeight(),
-							(canvas.getWidth() - mCacheBitmap.getWidth()) / 2 + mCacheBitmap.getWidth());
+							(canvas.getWidth() - mCacheBitmap.getWidth()) / 2 + mCacheBitmap.getWidth(),
+							(canvas.getHeight() - mCacheBitmap.getHeight()) / 2 + mCacheBitmap.getHeight()
+							);
 //					Rect dst = new Rect(0, 0, canvas.getWidth(), canvas.getHeight());
 					canvas.drawBitmap(mCacheBitmap, src, dst, null);
 				}
@@ -477,8 +481,8 @@ public abstract class CameraBridgeViewBase extends SurfaceView implements Surfac
 		DebugLog.i("JavaCameraView", "AllocateCache---------------" + getWidth() + "   " + getHeight());
 
 
-		mCacheBitmap = Bitmap.createBitmap(mFrameWidth, mFrameHeight, Bitmap.Config.ARGB_8888);
-//		mCacheBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
+//		mCacheBitmap = Bitmap.createBitmap(mFrameWidth, mFrameHeight, Bitmap.Config.ARGB_8888);
+		mCacheBitmap = Bitmap.createBitmap(mFrameHeight, mFrameWidth, Bitmap.Config.ARGB_4444);
 	}
 
 	public interface ListItemAccessor {

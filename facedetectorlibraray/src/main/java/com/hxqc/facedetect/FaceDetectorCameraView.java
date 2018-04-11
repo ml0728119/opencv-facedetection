@@ -225,24 +225,25 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 		//竖屏翻转
 		Mat mRgbaT = new Mat();
 		Core.transpose(mRgba, mRgbaT); //转置函数，可以水平的图像变为垂直
-		Imgproc.resize(mRgbaT, mRgba, mRgba.size(), 0.0D, 0.0D, 0); //将转置后的图像缩放为mRgbaF的大小
+
+		Imgproc.resize(mRgbaT, mRgba, mRgbaT.size(), 0.0D, 0.0D, 0); //将转置后的图像缩放为mRgbaF的大小
 		Core.flip(mRgba, mRgba, 1); //根据x,y轴翻转，0-x 1-y
 		Core.flip(mRgba, mRgba, 0); //根据x,y轴翻转，0-x 1-y
-//
+////
 		Core.transpose(mGray, mRgbaT); //转置函数，可以水平的图像变为垂直
-		Imgproc.resize(mRgbaT, mGray, mGray.size(), 0.0D, 0.0D, 0); //将转置后的图像缩放为mRgbaF的大小
+		Imgproc.resize(mRgbaT, mGray, mRgbaT.size(), 0.0D, 0.0D, 0); //将转置后的图像缩放为mRgbaF的大小
 		Core.flip(mGray, mGray, 1); //根据x,y轴翻转，0-x 1-y
 		Core.flip(mGray, mGray, 0); //根据x,y轴翻转，0-x 1-y
 
-		i++;
-		if (i % 3 == 0) {
-			detectorFace(mRgba, mGray);
-			return mRgba;
-		} else {
-
-			return mRgba;
-		}
-
+//		i++;
+//		if (i % 3 == 0) {
+		detectorFace(mRgba, mGray);
+//			return mRgba;
+//		} else {
+//
+//			return mRgba;
+//		}
+		return mRgba;
 	}
 
 	/**
@@ -266,10 +267,12 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 			mFaceNativeDetector.detect(grayMat, faces);
 		}
 
+
 		Rect[] facesArray = faces.toArray();
 		if (facesArray.length == 1) {
 			mHandler.sendEmptyMessage(FRCaptureFaceStatusNoBlink);
-			detectorEye(rgbaMat, grayMat);
+
+			detectorEye(rgbaMat, grayMat, facesArray[0]);
 		} else if (facesArray.length > 1) {
 			mHandler.sendEmptyMessage(FRCaptureFaceStatusMoreThanOneFace);
 			clearEyeMat();
@@ -278,9 +281,9 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 			clearEyeMat();
 		}
 //		if (BuildConfig.DEBUG) {
-			for (Rect aFacesArray : facesArray) {
-				Imgproc.rectangle(rgbaMat, aFacesArray.tl(), aFacesArray.br(), FACE_RECT_COLOR, 3);
-			}
+//		for (Rect aFacesArray : facesArray) {
+//			Imgproc.rectangle(rgbaMat, aFacesArray.tl(), aFacesArray.br(), FACE_RECT_COLOR, 3);
+//		}
 //		}
 	}
 
@@ -290,25 +293,36 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 	 * @param rgbaMat
 	 */
 
-	private void detectorEye(Mat rgbaMat, Mat grayMat) {
+	private void detectorEye(Mat rgbaMat, Mat grayMat, Rect faceRect) {
+
+		double eye[] = new double[]{
+				faceRect.x * 1.1, faceRect.y * 1.23, faceRect.width * 0.76, faceRect.height * 0.43
+		};
+		Rect eyeRe = faceRect.clone();
+
+		eyeRe.set(eye);
+		DebugLog.e("Activity", "faceRect  " + faceRect.x + "  " + faceRect.y + "   " + faceRect.width + "   " + faceRect.height);
+		DebugLog.e("Activity", "eyeRe     " + eyeRe.x + "  " + eyeRe.y + "   " + eyeRe.width + "   " + eyeRe.height);
+		DebugLog.e("Activity", "row  " + (eyeRe.x + eyeRe.width) + "  " + (eyeRe.y + eyeRe.height));
+		DebugLog.e("Activity", " grayMat  " + grayMat.cols() + "  " + grayMat.rows() + "   ");
+		Mat eyeMat = grayMat.submat(eyeRe);
 
 		MatOfRect eyesRA = new MatOfRect();
-
 //
 		if (mDetectorType == JAVA_DETECTOR) {
 			if (mEyeJavaDetector != null) {
-				mEyeJavaDetector.detectMultiScale(grayMat, eyesRA, 1.1, 2, 0, // TODO: objdetect.CV_HAAR_SCALE_IMAGE
+				mEyeJavaDetector.detectMultiScale(eyeMat, eyesRA, 1.1, 2, 0, // TODO: objdetect.CV_HAAR_SCALE_IMAGE
 						new Size(60, 60), new Size());
 			}
 
 		} else {
-			mEyesNativeDetector.detect(grayMat, eyesRA);
+			mEyesNativeDetector.detect(eyeMat, eyesRA);
 		}
 		Rect[] eyeArray = eyesRA.toArray();
 //		if (BuildConfig.DEBUG) {
-			for (Rect anEyeArray : eyeArray) {
-				Imgproc.rectangle(rgbaMat, anEyeArray.tl(), anEyeArray.br(), EYE_RECT_COLOR, 3);
-			}
+//		for (Rect anEyeArray : eyeArray) {
+//		Imgproc.rectangle(rgbaMat, eyeRe.tl(), eyeRe.br(), EYE_RECT_COLOR, 3);
+//		}
 //		}
 		blink(rgbaMat, eyeArray.length);
 	}
