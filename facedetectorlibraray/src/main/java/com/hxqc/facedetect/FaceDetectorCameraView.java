@@ -296,25 +296,37 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 	private void detectorEye(Mat rgbaMat, Mat grayMat, Rect faceRect) {
 
 		Rect eyeRe = faceRect.clone();
-		if (eyeRe.x + eyeRe.width > grayMat.cols()) {
-			eyeRe.width =(grayMat.cols() - eyeRe.x);
-			DebugLog.e("Activity", "aaaa------------------  ");
-		}
-		if (eyeRe.y + eyeRe.height > grayMat.rows()) {
-			eyeRe.height=(grayMat.rows()-eyeRe.y);
-			DebugLog.e("Activity", "bbbbb------------------  ");
-		}
+		DebugLog.i("Activity", "faceRect  " + faceRect.x + "  " + faceRect.y + "   " + faceRect.width + "   " + faceRect.height);
+		DebugLog.i("Activity", "eyeRe     " + eyeRe.x + "  " + eyeRe.y + "   " + eyeRe.width + "   " + eyeRe.height);
+		DebugLog.i("Activity", "row      " + (eyeRe.x + eyeRe.width) + "  " + (eyeRe.y + eyeRe.height));
+		DebugLog.i("Activity", "grayMat  " + grayMat.cols() + "  " + grayMat.rows() + "   ");
+
 		double eye[] = new double[]{
 				eyeRe.x * 1.12, eyeRe.y * 1.23, eyeRe.width * 0.76, eyeRe.height * 0.43
 		};
 
 		eyeRe.set(eye);
-		DebugLog.e("Activity", "faceRect  " + faceRect.x + "  " + faceRect.y + "   " + faceRect.width + "   " + faceRect.height);
-		DebugLog.e("Activity", "eyeRe     " + eyeRe.x + "  " + eyeRe.y + "   " + eyeRe.width + "   " + eyeRe.height);
-		DebugLog.e("Activity", "row      " + (eyeRe.x + eyeRe.width) + "  " + (eyeRe.y + eyeRe.height));
-		DebugLog.e("Activity", "grayMat  " + grayMat.cols() + "  " + grayMat.rows() + "   ");
+//		DebugLog.i("Activity", "-----------------------------------------");
+//		DebugLog.i("Activity", "faceRect  " + faceRect.x + "  " + faceRect.y + "   " + faceRect.width + "   " + faceRect.height);
+//		DebugLog.i("Activity", "eyeRe     " + eyeRe.x + "  " + eyeRe.y + "   " + eyeRe.width + "   " + eyeRe.height);
+//		DebugLog.i("Activity", "row      " + (eyeRe.x + eyeRe.width) + "  " + (eyeRe.y + eyeRe.height));
+//		DebugLog.i("Activity", "grayMat  " + grayMat.cols() + "  " + grayMat.rows() + "   ");
+//
+//		DebugLog.i("Activity", "======================================");
+		if ((eyeRe.x + eyeRe.width) > grayMat.cols()) {
+			eyeRe.width = (grayMat.cols() - eyeRe.x);
+//			DebugLog.e("Activity", "aaaa------------------  ");
+		}
+		if ((eyeRe.y + eyeRe.height) > grayMat.rows()) {
+			eyeRe.height = (grayMat.rows() - eyeRe.y);
+//			DebugLog.e("Activity", "bbbbb------------------  ");
+		}
+//		DebugLog.e("Activity", "faceRect  " + faceRect.x + "  " + faceRect.y + "   " + faceRect.width + "   " + faceRect.height);
+//		DebugLog.e("Activity", "eyeRe     " + eyeRe.x + "  " + eyeRe.y + "   " + eyeRe.width + "   " + eyeRe.height);
+//		DebugLog.e("Activity", "row      " + (eyeRe.x + eyeRe.width) + "  " + (eyeRe.y + eyeRe.height));
+//		DebugLog.e("Activity", "grayMat  " + grayMat.cols() + "  " + grayMat.rows() + "   ");
 		Mat eyeMat = grayMat.submat(eyeRe);
-		DebugLog.e("Activity", "eyeMat  " + eyeMat.cols() + "  " + eyeMat.rows() + "   ");
+//		DebugLog.e("Activity", "eyeMat  " + eyeMat.cols() + "  " + eyeMat.rows() + "   ");
 		MatOfRect eyesRA = new MatOfRect();
 //
 		if (mDetectorType == JAVA_DETECTOR) {
@@ -329,7 +341,7 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 		Rect[] eyeArray = eyesRA.toArray();
 //		if (BuildConfig.DEBUG) {
 //		for (Rect anEyeArray : eyeArray) {
-//		Imgproc.rectangle(rgbaMat, eyeRe.tl(), eyeRe.br(), EYE_RECT_COLOR, 3);
+//			Imgproc.rectangle(rgbaMat, eyeRe.tl(), eyeRe.br(), EYE_RECT_COLOR, 3);
 //		}
 //		}
 		blink(rgbaMat, eyeArray.length);
