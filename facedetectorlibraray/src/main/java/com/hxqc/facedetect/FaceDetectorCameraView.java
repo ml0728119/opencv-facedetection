@@ -12,6 +12,7 @@ import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
 import org.opencv.android.JavaCameraView;
 import org.opencv.android.LoaderCallbackInterface;
+import org.opencv.android.OpenCVLoader;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfRect;
@@ -139,13 +140,15 @@ public class FaceDetectorCameraView extends JavaCameraView implements CameraBrid
 
 
 	public void onResume() {
-
-//		if (!OpenCVLoader.initDebug()) {
-//			Log.d(TAG, "Internal OpenCV library not found. Using OpenCV Manager for initialization");
-//			OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_0_0, getContext(), mLoaderCallback);
-//		} else {
 		Log.d(TAG, "OpenCV library found inside package. Using it!");
+		OpenCVLoader.initDebug();
 		mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
+//		if (!OpenCVLoader.initDebug()) {
+////			Log.d(TAG, "Internal OpenCV library not found. Using OpenCV Manager for initialization");
+////			OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_0_0, getContext(), mLoaderCallback);
+//		} else {
+//		Log.d(TAG, "OpenCV library found inside package. Using it!");
+//		mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
 //		}
 	}
 
