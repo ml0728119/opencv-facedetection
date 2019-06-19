@@ -162,20 +162,16 @@ public class JavaCameraView extends CameraBridgeViewBase implements PreviewCallb
 					mPreviewFormat = params.getPreviewFormat();
 
 					DebugLog.i(TAG, "Set preview size to " + (int) frameSize.width + "x" + (int) frameSize.height);
-
 //					params.setPreviewSize((int) frameSize.width, (int) frameSize.height);
 					params.setPreviewSize((int) frameSize.width, (int) frameSize.height);
 					if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH && !Build.MODEL.equals("GT-I9100"))
 						params.setRecordingHint(true);
-
 					List<String> FocusModes = params.getSupportedFocusModes();
 					if (FocusModes != null && FocusModes.contains(Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO)) {
 						params.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO);
 					}
-
 					mCamera.setParameters(params);
 					params = mCamera.getParameters();
-
 					mFrameWidth = params.getPreviewSize().width;
 					mFrameHeight = params.getPreviewSize().height;
 

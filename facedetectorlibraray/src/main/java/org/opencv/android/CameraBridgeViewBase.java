@@ -214,7 +214,7 @@ public abstract class CameraBridgeViewBase extends SurfaceView implements Surfac
 	}
 
 	public void surfaceCreated(SurfaceHolder holder) {
-	    /* Do nothing. Wait until surfaceChanged delivered */
+		/* Do nothing. Wait until surfaceChanged delivered */
 	}
 
 	public void surfaceDestroyed(SurfaceHolder holder) {
@@ -311,7 +311,7 @@ public abstract class CameraBridgeViewBase extends SurfaceView implements Surfac
 		}
 
 		if (targetState != mState) {
-		    /* The state change detected. Need to exit the current state and enter target state */
+			/* The state change detected. Need to exit the current state and enter target state */
 			processExitState(mState);
 			mState = targetState;
 			processEnterState(mState);
@@ -349,11 +349,11 @@ public abstract class CameraBridgeViewBase extends SurfaceView implements Surfac
 	}
 
 	private void onEnterStoppedState() {
-	    /* nothing to do */
+		/* nothing to do */
 	}
 
 	private void onExitStoppedState() {
-	    /* nothing to do */
+		/* nothing to do */
 	}
 
 	// NOTE: The order of bitmap constructor and camera connection is important for android 4.1.x
@@ -436,16 +436,16 @@ public abstract class CameraBridgeViewBase extends SurfaceView implements Surfac
 //							canvas.getWidth(), canvas.getHeight());
 					canvas.drawBitmap(mCacheBitmap, src, dst, null);
 				} else {
-					DebugLog.i("TAG", "--------------------------" );
-					DebugLog.e("TAG", "mCacheBitmap.getWidth() " + canvas.getWidth()+"  "+canvas.getHeight());
-					DebugLog.i("TAG", "mCacheBitmap.getWidth() " + mCacheBitmap.getWidth()+"  "+mCacheBitmap.getHeight());
+					DebugLog.i("TAG", "--------------------------");
+					DebugLog.e("TAG", "mCacheBitmap.getWidth() " + canvas.getWidth() + "  " + canvas.getHeight());
+					DebugLog.i("TAG", "mCacheBitmap.getWidth() " + mCacheBitmap.getWidth() + "  " + mCacheBitmap.getHeight());
 
-					Rect src = new Rect(0, 0, mCacheBitmap.getWidth() ,  mCacheBitmap.getHeight());
+					Rect src = new Rect(0, 0, mCacheBitmap.getWidth(), mCacheBitmap.getHeight());
 					Rect dst = new Rect((canvas.getWidth() - mCacheBitmap.getWidth()) / 2,
 							(canvas.getHeight() - mCacheBitmap.getHeight()) / 2,
 							(canvas.getWidth() - mCacheBitmap.getWidth()) / 2 + mCacheBitmap.getWidth(),
 							(canvas.getHeight() - mCacheBitmap.getHeight()) / 2 + mCacheBitmap.getHeight()
-							);
+					);
 //					Rect dst = new Rect(0, 0, canvas.getWidth(), canvas.getHeight());
 					canvas.drawBitmap(mCacheBitmap, src, dst, null);
 				}
@@ -508,11 +508,21 @@ public abstract class CameraBridgeViewBase extends SurfaceView implements Surfac
 		int maxAllowedWidth = (mMaxWidth != MAX_UNSPECIFIED && mMaxWidth < surfaceWidth) ? mMaxWidth : surfaceWidth;
 		int maxAllowedHeight = (mMaxHeight != MAX_UNSPECIFIED && mMaxHeight < surfaceHeight) ? mMaxHeight : surfaceHeight;
 
+
 		for (Object size : supportedSizes) {
 			int width = accessor.getWidth(size);
 			int height = accessor.getHeight(size);
 			DebugLog.i("JavaCameraView", "supportedSizes  w  " + width + "  h  " + height);
 			DebugLog.e("JavaCameraView", "surface  Sizes  w  " + surfaceWidth + "  h  " + surfaceHeight);
+			if (width == 800 && height == 600) {
+				return new Size(800, 600);
+			} else if (width == 720 && height == 480) {
+				return new Size(720, 480);
+			} else if (width == 640 && height == 480) {
+				return new Size(640, 480);
+			}
+
+
 			if (width <= maxAllowedWidth && height <= maxAllowedHeight) {
 				DebugLog.d("JavaCameraView", "kkkkk  " + width + "  h  " + height + " maxAllowedWidth  " + maxAllowedWidth + " maxAllowedHeight  " + maxAllowedHeight);
 				if (width >= calcWidth && height >= calcHeight) {

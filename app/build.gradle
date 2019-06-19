@@ -1,15 +1,12 @@
 apply plugin: "com.android.application"
 
-
 android {
     compileSdkVersion 21
-    buildToolsVersion "26.0.2"
 
     defaultConfig {
         applicationId "org.opencv.samples.facedetect"
         minSdkVersion 8
         targetSdkVersion 21
-
 
     }
 
