@@ -26,7 +26,7 @@ uploadArchives {
                 authentication(userName: 'admin', password: 'admin123')
             }
             pom.project {
-                version '0.0.12'
+                version '0.0.13'
                 artifactId 'FaceDetector'
                 groupId "com.hxqc"
                 packaging 'aar'
